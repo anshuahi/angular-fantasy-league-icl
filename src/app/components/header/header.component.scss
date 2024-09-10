@@ -1,0 +1,32 @@
+header {
+    display: flex;
+    // justify-content: space-between;
+    height: 60px;
+    padding: 10px;
+    background-color: rgb(216, 17, 17);
+}
+
+.title {
+    flex-grow: 1;
+    margin: auto;
+    margin-left: 20px;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+nav {
+    margin: auto;
+}
+
+nav ul li {
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+}

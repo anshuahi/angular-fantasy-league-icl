@@ -1,0 +1,29 @@
+<div class="login-container">
+    <div class="login-left">
+        <h2>Sign Up! 👋</h2>
+        <!-- <p>How do I get started?</p>
+        <button class="btn btn-google">Sign in with Google</button>
+        <button class="btn btn-apple">Sign in with Apple</button>
+        <p>or Login with Email</p> -->
+        <form class="form-signin login-form" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+            <label for="name">Name</label>
+            <input type="name" id="name" name="name" placeholder="test@atheros.ai" formControlName="name">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="test@atheros.ai" formControlName="email">
+
+            <label for="phone">Phone</label>
+            <input type="phone" id="phone" name="phone" placeholder="test@atheros.ai" formControlName="phone">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="******" formControlName="password">
+
+            <label for="confirm_password">Confirm Password</label>
+            <input type="password" id="confirm_password" name="confirm_password" placeholder="******"
+                formControlName="confirm_password">
+
+            <button type="submit" class="btn btn-signin">Sign Up</button>
+        </form>
+        <p>Don't have an account? <a routerLink="/login">Sign In Now</a></p>
+    </div>
+</div>
