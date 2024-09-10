@@ -20,7 +20,6 @@ export class SignupComponent {
       phone: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],
-
       confirm_password: ['', Validators.required]
     });
   }

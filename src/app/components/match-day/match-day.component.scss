@@ -1,0 +1,41 @@
+.week {
+    border: 5px solid red;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 10px;
+    width: 250px;
+}
+
+.matchinfo {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.actions {
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.create {
+    background-color: rgb(236, 55, 73);
+}
+
+.preview {
+    background-color: rgb(144 178 230);
+    // color: black;
+}
+
+.mat-mdc-button:not(:disabled) {
+    .create {
+        background-color: aqua;
+    }
+
+    color: white;
+}

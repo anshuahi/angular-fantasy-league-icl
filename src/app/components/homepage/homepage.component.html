@@ -1,1 +1,5 @@
-<p>homepage works!</p>
+<div class="homepage">
+    <div *ngFor="let week of weekdays">
+        <app-match-day [weekDay]="week"></app-match-day>
+    </div>
+</div>
