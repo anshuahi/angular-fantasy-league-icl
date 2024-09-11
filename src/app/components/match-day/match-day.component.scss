@@ -3,7 +3,7 @@
     border-radius: 15px;
     margin: 10px;
     padding: 10px;
-    width: 250px;
+    width: 350px;
 }
 
 .matchinfo {
@@ -32,10 +32,6 @@ h1 {
     // color: black;
 }
 
-.mat-mdc-button:not(:disabled) {
-    .create {
-        background-color: aqua;
-    }
-
+button {
     color: white;
 }
