@@ -1,5 +1,5 @@
-<div class="week">
-    <h1>Week {{ weekDay.weekId }} </h1>
+<mat-card class="week">
+    <mat-card-title>Week {{ weekDay.weekId }} </mat-card-title>
     <div class="matchinfo">
         <app-match-info [team1]="weekDay.teamOne" [team2]="weekDay.teamTwo"></app-match-info>
     </div>
@@ -14,4 +14,4 @@
         <button type="button" class="btn create">Create/Edit</button>
         <button type="button" class="btn btn-info">Preview</button>
     </div>
-</div>
+</mat-card>

@@ -2,11 +2,12 @@ import { Component, Input } from '@angular/core';
 import { WeekDetails } from '../homepage/homepage.component';
 import { MatchInfoComponent } from "./match-info/match-info.component";
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-match-day',
   standalone: true,
-  imports: [MatchInfoComponent, MatButtonModule],
+  imports: [MatchInfoComponent, MatButtonModule, MatCardModule],
   templateUrl: './match-day.component.html',
   styleUrl: './match-day.component.scss'
 })
