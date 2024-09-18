@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { LoginComponent } from '../login/login.component';
 import { CommonModule } from '@angular/common';
 import { MatchDayComponent } from "../match-day/match-day.component";
+import { WeekDetailsService } from '../../services/week-details.service';
+import { BehaviorSubject, Observable, of } from 'rxjs';
 // import { WeekDay } from '@angular/common';
 
 
@@ -17,6 +19,19 @@ export interface WeekDay {
   match3: Match,
 }
 
+export interface WeekDetails {
+  cutOffTime: string,
+  teamFive: string,
+  teamFour: string,
+  teamOne: string,
+  teamSix: string,
+  teamThree: string,
+  teamTwo: string,
+  weekId: Number,
+  weekName: string,
+}
+
+
 @Component({
   selector: 'app-homepage',
   standalone: true,
@@ -25,30 +40,17 @@ export interface WeekDay {
   styleUrl: './homepage.component.scss'
 })
 export class HomepageComponent implements OnInit {
+
+  weekDetailsSubject = new BehaviorSubject<WeekDetails[]>([]);
+  weekDetails$: Observable<WeekDetails[]> = this.weekDetailsSubject.asObservable();
+  constructor(private weekDetailsService: WeekDetailsService) { }
+
   ngOnInit(): void {
-    var week = {
-      weekId: '1',
-      match1: { team1: "A", team2: "B" },
-      match2: { team1: "A", team2: "B" },
-      match3: { team1: "A", team2: "B" },
-    } as WeekDay
-    this.weekdays.push(week);
-    week = { ...week, weekId: '2' };
-    this.weekdays.push(week);
-    week = { ...week, weekId: '3' };
-    this.weekdays.push(week);
-    week = { ...week, weekId: '4' };
-    this.weekdays.push(week);
-    week = { ...week, weekId: '5' };
-    this.weekdays.push(week);
-    week = { ...week, weekId: '6' };
-    this.weekdays.push(week);
-    week = { ...week, weekId: '7' };
-    this.weekdays.push(week);
-    console.log(this.weekdays)
+    this.weekDetailsService.getWeekDetails().subscribe(weekDetails => {
+      this.weekDetailsSubject.next(weekDetails);
+      console.log(weekDetails)
+    });
   }
 
-
-  weekdays: WeekDay[] = [];
 
 }

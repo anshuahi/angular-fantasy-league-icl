@@ -1,13 +1,13 @@
 <div class="week">
     <h1>Week {{ weekDay.weekId }} </h1>
     <div class="matchinfo">
-        <app-match-info [match]="weekDay.match1"></app-match-info>
+        <app-match-info [team1]="weekDay.teamOne" [team2]="weekDay.teamTwo"></app-match-info>
     </div>
     <div class="matchinfo">
-        <app-match-info [match]="weekDay.match2"></app-match-info>
+        <app-match-info [team1]="weekDay.teamThree" [team2]="weekDay.teamFour"></app-match-info>
     </div>
     <div class="matchinfo">
-        <app-match-info [match]="weekDay.match3"></app-match-info>
+        <app-match-info [team1]="weekDay.teamFive" [team2]="weekDay.teamSix"></app-match-info>
     </div>
 
     <div class="actions">
