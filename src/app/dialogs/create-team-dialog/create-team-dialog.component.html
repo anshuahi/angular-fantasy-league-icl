@@ -1,0 +1,10 @@
+<mat-card>
+    <mat-card-title>Create Your Team</mat-card-title>
+    <mat-label>Options</mat-label>
+    <mat-select [(ngModel)]="selectedPlayers">
+        <mat-option *ngFor="let option of playerDetails" [value]="option.name">
+            {{ option.name }}
+        </mat-option>
+    </mat-select>
+    <p> you selected {{ selectedPlayers }}</p>
+</mat-card>
