@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { of } from 'rxjs';
 
 
 export interface PlayerDetail {
@@ -28,7 +29,11 @@ export class PlayerDetailsService {
   getPlayerList() {
     var endpoint = "api/players/all";
     // return this.http.get<any[]>(this.base_url + endpoint);
-    return this.playerDetails;
+    return of(this.playerDetails);
+  }
 
+
+  getPlayers() {
+    return this.playerDetails;
   }
 }

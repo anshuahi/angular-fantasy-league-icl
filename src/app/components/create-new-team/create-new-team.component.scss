@@ -1,0 +1,73 @@
+.all-teams {
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+ul {
+    padding-left: 15px;
+}
+
+.team-info {
+    width: 300px;
+    border: 2px solid red;
+    margin: 10px;
+}
+
+.player-list {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    margin: auto;
+    text-align: center;
+}
+
+.title {
+    // margin: auto;
+    margin-bottom: 10px;
+    height: 60px;
+    border: 1px solid black;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+li {
+    display: flex;
+    flex-direction: row;
+}
+
+.player-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    margin: 1px 4px;
+    flex-grow: 1;
+}
+
+.select-player {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2px;
+    margin-right: 20px;
+    padding: 3px 10px;
+    border: 1px solid red;
+    background-color: gray;
+    cursor: pointer;
+}
+
+.player-detail {
+    flex-grow: 1;
+    flex: 1;
+}

@@ -28,8 +28,8 @@ export class CreateTeamDialogComponent implements OnInit {
   playerDetails!: PlayerDetail[];
 
   ngOnInit(): void {
-    this.playerDetails = this.playerDetailsService.getPlayerList();
-    this.playerDetailsSubject.next(this.playerDetails);
+    // this.playerDetails = this.playerDetailsService.getPlayerList();
+    // this.playerDetailsSubject.next(this.playerDetails);
   }
 
   onClose(): void {

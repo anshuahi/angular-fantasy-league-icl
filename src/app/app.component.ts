@@ -28,6 +28,7 @@ export class AppComponent implements OnInit {
       // response.map(player => {
       //   player.
       // })
+      this.playerDetailsService.setPlayerDetails(response);
       console.log(response); // Debugging the fetched data
     });
   }
