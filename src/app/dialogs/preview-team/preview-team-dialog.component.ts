@@ -18,7 +18,7 @@ import { Router } from '@angular/router';
 })
 export class PreviewTeamDialogComponent implements OnInit {
 
-  teamsize = 10;
+  teamsize = 15;
   constructor(
     public dialogRef: MatDialogRef<PreviewTeamDialogComponent>,
     private http: HttpClient,
@@ -37,6 +37,7 @@ export class PreviewTeamDialogComponent implements OnInit {
   ngOnInit(): void {
     console.log("preview data", this.data);
     this.selectedPlayers = this.data?.selectedPlayersList
+    console.log(this.selectedPlayers);
     // this.data = this.data?.sort((a, b) => a?.teamId.localeCompare(b?.teamId));
   }
 

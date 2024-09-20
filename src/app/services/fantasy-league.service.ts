@@ -103,7 +103,7 @@ export class FantasyLeagueService {
     var endpoint = "matches";
     return this.http.get<WeekDetails[]>(this.base_url + endpoint).pipe(
       map(matches => {
-        matches.push(this.week0);
+        // matches.push(this.week0);
         const m = matches.sort((a, b) => Number(a.weekId) - Number(b.weekId))
         return m;
       })
