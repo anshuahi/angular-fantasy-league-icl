@@ -22,12 +22,12 @@ export interface WeekDay {
 
 export interface WeekDetails {
   cutOffTime: string,
-  teamFive: string,
-  teamFour: string,
-  teamOne: string,
-  teamSix: string,
-  teamThree: string,
-  teamTwo: string,
+  team1: string,
+  team2: string,
+  team3: string,
+  team4: string,
+  team5: string,
+  team6: string,
   weekId: Number,
   weekName: string,
 }
@@ -51,6 +51,7 @@ export class HomepageComponent implements OnInit {
 
   ngOnInit(): void {
     this.fantasyLeagueService.getWeekDetails().subscribe(weekDetails => {
+      console.log(weekDetails);
       this.weekDetailsSubject.next(weekDetails);
     });
 

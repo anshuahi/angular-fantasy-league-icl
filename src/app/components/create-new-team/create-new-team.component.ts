@@ -40,18 +40,15 @@ export class CreateNewTeamComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(() => {
       this.playerDetails = this.playerDetailsService.getPlayers();
-      // console.log("this.playerDetails", this.playerDetails);
     }, 2000);
     this.playerDetailsSubject.next(this.playerDetails);
 
     this.route.paramMap.subscribe(params => {
       this.weekId = params.get('id')!;
-      console.log(this.weekId, params);
     });
   }
 
   checkCondition(player: PlayerDetail): Observable<boolean> {
-    // console.log("check called");
     if (this.selectedPlayers.includes(player.playerId)) return of(false);
     if (this.selectedPlayers.length == this.teamSize || this.creditsLeft < 6 || Number(player.rating) > this.creditsLeft) {
       return of(true);
@@ -67,12 +64,10 @@ export class CreateNewTeamComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('Dialog was closed');
     });
   }
 
   onCheckboxChange(selectedPlayer: PlayerDetail) {
-    // console.log(selectedPlayer);
     if (this.selectedPlayers.includes(selectedPlayer.playerId)) {
       this.selectedPlayers = this.selectedPlayers.filter(player => player !== selectedPlayer.playerId);
       this.creditsLeft = this.creditsLeft + Number(selectedPlayer.rating)
@@ -83,7 +78,6 @@ export class CreateNewTeamComponent implements OnInit {
       this.creditsLeft = this.creditsLeft - Number(selectedPlayer.rating)
       selectedPlayer.selected = true;
     }
-    // console.log("players", this.playerDetails);
   }
 
   filteredItems(teamId: string): any {
@@ -105,7 +99,6 @@ export class CreateNewTeamComponent implements OnInit {
     //   )
     // )
     // ?.filter(player => player.teamId === teamId);
-    // console.log("team ", team);
     // return team;
   }
 }

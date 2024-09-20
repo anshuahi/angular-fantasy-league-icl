@@ -10,7 +10,18 @@ import { FantasyTeamRequest } from '../models/fantasy-team-request.model';
   providedIn: 'root'
 })
 export class FantasyLeagueService {
+
+  registerMessageSubject = new BehaviorSubject<string>('');
+  registerMessage$ = this.registerMessageSubject.asObservable();
+  setRegisterSuccessMessage() {
+    this.registerMessageSubject.next("See you at Mantra!");
+    // setTimeout(() => {
+    //   this.registerMessageSubject.next('');
+    // }, 10000);
+  }
+
   loginUrl = "api/users/login";
+  signupUrl = "api/users/register";
   createTeamUrl = "api/fantasy/create-team";
   base_url: string = "http://localhost:8080/";
 
@@ -21,6 +32,10 @@ export class FantasyLeagueService {
 
   setPlayerDetails(playerDetails: PlayerDetail[]) {
     this.playerDetails = playerDetails;
+  }
+
+  setUser(user: any) {
+    this.user = user;
   }
 
   // "https://infinity-fantasy-league.et.r.appspot.com/";
@@ -54,22 +69,19 @@ export class FantasyLeagueService {
     const fantasyTeam = {
       selectedPlayers: players,
       weekId: weekId,
-      userId: this.user.phone
+      userId: this.user?.phone
     } as FantasyTeamRequest
-    console.log("fantasy team ", fantasyTeam);
-    return this.http.post<string>(this.base_url + this.createTeamUrl, fantasyTeam).subscribe(
-      a => console.log(a)
-    )
+    // console.log("fantasy team ", fantasyTeam);
+    return this.http.post<any>(this.base_url + this.createTeamUrl, fantasyTeam);
   }
 
   loginUser(phone: string, password: string) {
 
     const loginBody = { phone: phone, password: password };
-    console.log(loginBody)
+    // console.log(loginBody)
     this.authenticatedSubject.next(false);
     this.http.post<any>(this.base_url + this.loginUrl, loginBody).subscribe(
       response => {
-        console.log(response);
         if (response.status === 200) {
           this.user = response.data;
           localStorage.setItem('user', JSON.stringify(this.user));
@@ -80,6 +92,20 @@ export class FantasyLeagueService {
     return true;
   }
 
+  signupUser(username: string, fullName: string, email: string, phone: string, password: string) {
+    const signupBody = { username, fullName, email, phone, password }
+    // console.log(signupBody);
+    return this.http.post<any>(this.base_url + this.signupUrl, signupBody);
+
+    // .subscribe(response => {
+    //   console.log(response);
+    //   if (response.status === 200) {
+    //     this.user = response.data;
+    //     this.authenticatedSubject.next(true);
+    //   }
+    // });
+  }
+
   getUser() {
     return this.user;
   }
@@ -87,6 +113,13 @@ export class FantasyLeagueService {
     // console.log("user authenticated from chrom local storage")
     this.authenticatedSubject.next(true);
     this.user = JSON.parse(user);
-
+    // console.log(this.user);
   }
+
+  // setUserAuthentication(user: any) {
+  //   // console.log("user authenticated from chrom local storage")
+  //   this.authenticatedSubject.next(true);
+  //   this.user = JSON.parse(user);
+  //   console.log(this.user);
+  // }
 }

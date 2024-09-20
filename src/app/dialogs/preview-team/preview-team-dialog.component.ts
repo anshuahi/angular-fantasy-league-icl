@@ -6,6 +6,8 @@ import { FantasyLeagueService } from '../../services/fantasy-league.service';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { PlayerDetail } from '../../models/player-details.model';
+import { FantasyTeamResponse } from '../../models/fantasy-team.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-preview-team',
@@ -20,6 +22,7 @@ export class PreviewTeamDialogComponent implements OnInit {
   constructor(
     public dialogRef: MatDialogRef<PreviewTeamDialogComponent>,
     private http: HttpClient,
+    private router: Router,
     @Inject(MAT_DIALOG_DATA) public data: { selectedPlayersList: PlayerDetail[], weekId: string },
     private fantasyLeagueService: FantasyLeagueService,
   ) { }
@@ -32,7 +35,7 @@ export class PreviewTeamDialogComponent implements OnInit {
   viceCaptain: string = '';
 
   ngOnInit(): void {
-    console.log("preview data", this.data);
+    // console.log("preview data", this.data);
     this.selectedPlayers = this.data?.selectedPlayersList
     // this.data = this.data?.sort((a, b) => a?.teamId.localeCompare(b?.teamId));
   }
@@ -73,7 +76,15 @@ export class PreviewTeamDialogComponent implements OnInit {
   }
 
   saveTeam() {
-    console.log(this.selectedPlayers, this.captain, this.viceCaptain);
-    this.fantasyLeagueService.saveTeam(this.selectedPlayers, this.captain, this.viceCaptain, this.data.weekId);
+    // console.log(this.selectedPlayers, this.captain, this.viceCaptain);
+    this.fantasyLeagueService.saveTeam(this.selectedPlayers, this.captain, this.viceCaptain, this.data.weekId).subscribe(
+      (response) => {
+        // console.log(response);
+        if (response.status === 200) {
+          this.onClose();
+          this.router.navigate(['/']);
+        }
+      }
+    );
   }
 }
