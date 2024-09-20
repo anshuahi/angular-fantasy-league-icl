@@ -1,4 +1,4 @@
-runtime: nodejs14  # Use the Node.js runtime to serve static files
+runtime: nodejs18  # Use the Node.js runtime to serve static files
 
 instance_class: F1  # Optional: Define instance class for cost control (F1 is a low-cost, flexible option)
 
