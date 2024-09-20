@@ -1,23 +1,16 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { of } from 'rxjs';
+import { WeekDetails } from '../components/homepage/homepage.component';
+import { PlayerDetail } from '../models/player-details.model';
 
-
-export interface PlayerDetail {
-  playerId: string,
-  teamId: string,
-  name: string,
-  teamName: string,
-  role: string,
-  rating: string,
-}
 
 @Injectable({
   providedIn: 'root'
 })
-export class PlayerDetailsService {
+export class FantasyLeagueService {
 
-  playerDetails!: PlayerDetail[];
+  playerDetails: PlayerDetail[] = [];
   setPlayerDetails(playerDetails: PlayerDetail[]) {
     this.playerDetails = playerDetails;
   }
@@ -32,8 +25,21 @@ export class PlayerDetailsService {
     return of(this.playerDetails);
   }
 
-
   getPlayers() {
     return this.playerDetails;
+  }
+
+  getWeekDetails() {
+    var endpoint = "matches";
+    return this.http.get<WeekDetails[]>(this.base_url + endpoint);
+  }
+
+  saveTeam() {
+
+  }
+
+  loginUser(email: string, password: string) {
+    // throw new Error('Method not implemented.');
+    return true;
   }
 }

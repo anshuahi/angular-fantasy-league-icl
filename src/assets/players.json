@@ -5,7 +5,8 @@
         "name": "Deepak Thakur",
         "teamName": "Infinity Juggernauts",
         "role": "Batsman",
-        "rating": "6"
+        "rating": "6",
+        "selected": false
     },
     {
         "playerId": "2",
@@ -13,7 +14,8 @@
         "name": "Basant Sarda",
         "Team Name": "Infinity Juggernauts",
         "role": "Batsman",
-        "rating": "7"
+        "rating": "7",
+        "selected": false
     },
     {
         "playerId": "3",
@@ -21,7 +23,8 @@
         "name": "Sandeep Singh",
         "Team Name": "Dominating Warriors",
         "role": "Batsman",
-        "rating": "8.5"
+        "rating": "8.5",
+        "selected": false
     },
     {
         "playerId": "4",
@@ -29,7 +32,8 @@
         "name": "Rahul Sharma",
         "Team Name": "Hustlers",
         "role": "Batsman",
-        "rating": "8"
+        "rating": "8",
+        "selected": false
     },
     {
         "playerId": "5",
@@ -37,7 +41,8 @@
         "name": "Vadan",
         "Team Name": "Legends",
         "role": "Batsman",
-        "rating": "7.5"
+        "rating": "7.5",
+        "selected": false
     },
     {
         "playerId": "6",
@@ -45,7 +50,8 @@
         "name": "Rahul Dubey",
         "Team Name": "Predators",
         "role": "Batsman",
-        "rating": "7.5"
+        "rating": "7.5",
+        "selected": false
     },
     {
         "playerId": "7",
@@ -53,7 +59,8 @@
         "name": "Bhaskar Arora",
         "Team Name": "Hustlers",
         "role": "Batsman",
-        "rating": "6"
+        "rating": "6",
+        "selected": false
     },
     {
         "playerId": "8",
@@ -61,7 +68,8 @@
         "name": "Ronak Chandwani",
         "Team Name": "Infinity Juggernauts",
         "role": "Batsman",
-        "rating": "5"
+        "rating": "5",
+        "selected": false
     },
     {
         "playerId": "9",
@@ -69,7 +77,8 @@
         "name": "MKS",
         "Team Name": "New Bies Rising Stars",
         "role": "Batsman",
-        "rating": "7.5"
+        "rating": "7.5",
+        "selected": false
     },
     {
         "playerId": "10",
@@ -77,7 +86,8 @@
         "name": "Lalit Chandvani",
         "Team Name": "Dominating Warriors",
         "role": "Batsman",
-        "rating": "5"
+        "rating": "5",
+        "selected": false
     },
     {
         "playerId": "11",
@@ -85,7 +95,8 @@
         "name": "Jiten Israni",
         "Team Name": "Hustlers",
         "role": "Batsman",
-        "rating": "5"
+        "rating": "5",
+        "selected": false
     },
     {
         "playerId": "12",
@@ -93,7 +104,8 @@
         "name": "Nikhil Sinha",
         "Team Name": "Hustlers",
         "role": "Batsman",
-        "rating": "5"
+        "rating": "5",
+        "selected": false
     },
     {
         "playerId": "13",
@@ -101,7 +113,8 @@
         "name": "Niraj Lathar",
         "Team Name": "Legends",
         "role": "Batsman",
-        "rating": "7"
+        "rating": "7",
+        "selected": false
     },
     {
         "playerId": "14",
@@ -109,7 +122,8 @@
         "name": "Ammol Zawar",
         "Team Name": "Predators",
         "role": "Batsman",
-        "rating": "6"
+        "rating": "6",
+        "selected": false
     },
     {
         "playerId": "15",
@@ -117,7 +131,8 @@
         "name": "Zaki Mubarki",
         "Team Name": "Infinity Juggernauts",
         "role": "Batsman",
-        "rating": "6.5"
+        "rating": "6.5",
+        "selected": false
     },
     {
         "playerId": "16",
@@ -125,7 +140,8 @@
         "name": "Shiva",
         "Team Name": "Dominating Warriors",
         "role": "Batsman",
-        "rating": "6.5"
+        "rating": "6.5",
+        "selected": false
     },
     {
         "playerId": "17",
@@ -133,7 +149,8 @@
         "name": "Pranav Tripathi ",
         "Team Name": "Dominating Warriors",
         "role": "Batsman",
-        "rating": "7"
+        "rating": "7",
+        "selected": false
     },
     {
         "playerId": "18",
@@ -141,7 +158,8 @@
         "name": "Rakesh",
         "Team Name": "Legends",
         "role": "Batsman",
-        "rating": "6"
+        "rating": "6",
+        "selected": false
     },
     {
         "playerId": "19",
@@ -149,7 +167,8 @@
         "name": "Sahil Bhatt ",
         "Team Name": "New Bies Rising Stars",
         "role": "Bowler",
-        "rating": "8.5"
+        "rating": "8.5",
+        "selected": false
     },
     {
         "playerId": "20",
@@ -157,7 +176,8 @@
         "name": "Asrar Pathan",
         "Team Name": "Predators",
         "role": "Bowler",
-        "rating": "7.5"
+        "rating": "7.5",
+        "selected": false
     },
     {
         "playerId": "21",
@@ -165,7 +185,8 @@
         "name": "Tejas Muley ",
         "Team Name": "Dominating Warriors",
         "role": "Bowler",
-        "rating": "10"
+        "rating": "10",
+        "selected": false
     },
     {
         "playerId": "22",
@@ -173,7 +194,8 @@
         "name": "Sujay Patel ",
         "Team Name": "Dominating Warriors",
         "role": "Bowler",
-        "rating": "6"
+        "rating": "6",
+        "selected": false
     },
     {
         "playerId": "23",
@@ -181,7 +203,8 @@
         "name": "Amit Bade",
         "Team Name": "Dominating Warriors",
         "role": "Bowler",
-        "rating": "7"
+        "rating": "7",
+        "selected": false
     },
     {
         "playerId": "24",
@@ -189,7 +212,8 @@
         "name": "Nitin Sharma",
         "Team Name": "New Bies Rising Stars",
         "role": "Bowler",
-        "rating": "6.5"
+        "rating": "6.5",
+        "selected": false
     },
     {
         "playerId": "25",
@@ -197,7 +221,8 @@
         "name": "Gaurav c",
         "Team Name": "Predators",
         "role": "Bowler",
-        "rating": "7.5"
+        "rating": "7.5",
+        "selected": false
     },
     {
         "playerId": "26",
@@ -205,7 +230,8 @@
         "name": "VITRAG SHELADIA ",
         "Team Name": "New Bies Rising Stars",
         "role": "Bowler",
-        "rating": "10"
+        "rating": "10",
+        "selected": false
     },
     {
         "playerId": "27",
@@ -213,7 +239,8 @@
         "name": "Asaad Khan",
         "Team Name": "New Bies Rising Stars",
         "role": "Bowler",
-        "rating": "8"
+        "rating": "8",
+        "selected": false
     },
     {
         "playerId": "28",
@@ -221,7 +248,8 @@
         "name": "Yasir Siddiqui",
         "Team Name": "New Bies Rising Stars",
         "role": "Bowler",
-        "rating": "7.5"
+        "rating": "7.5",
+        "selected": false
     },
     {
         "playerId": "29",
@@ -229,7 +257,8 @@
         "name": "MAHESH SHEWALE",
         "Team Name": "Hustlers",
         "role": "Bowler",
-        "rating": "6"
+        "rating": "6",
+        "selected": false
     },
     {
         "playerId": "30",
@@ -237,7 +266,8 @@
         "name": "Kiran Thite",
         "Team Name": "Dominating Warriors",
         "role": "Bowler",
-        "rating": "7"
+        "rating": "7",
+        "selected": false
     },
     {
         "playerId": "31",
@@ -245,7 +275,8 @@
         "name": "Uday Velinkar",
         "Team Name": "New Bies Rising Stars",
         "role": "Bowler",
-        "rating": "7.5"
+        "rating": "7.5",
+        "selected": false
     },
     {
         "playerId": "32",
@@ -253,7 +284,8 @@
         "name": "Sunny Keshri ",
         "Team Name": "New Bies Rising Stars",
         "role": "Bowler",
-        "rating": "8"
+        "rating": "8",
+        "selected": false
     },
     {
         "playerId": "33",
@@ -261,7 +293,8 @@
         "name": "AB",
         "Team Name": "Dominating Warriors",
         "role": "Bowler",
-        "rating": "6.5"
+        "rating": "6.5",
+        "selected": false
     },
     {
         "playerId": "34",
@@ -269,7 +302,8 @@
         "name": "Aditya Nigam",
         "Team Name": "Hustlers",
         "role": "Bowler",
-        "rating": "9"
+        "rating": "9",
+        "selected": false
     },
     {
         "playerId": "35",
@@ -277,7 +311,8 @@
         "name": "Rahul Masatkar",
         "Team Name": "Infinity Juggernauts",
         "role": "Wicket Keeper Batsman",
-        "rating": "9"
+        "rating": "9",
+        "selected": false
     },
     {
         "playerId": "36",
@@ -285,7 +320,8 @@
         "name": "Rahul Humnabadkar ",
         "Team Name": "Dominating Warriors",
         "role": "Wicket Keeper Batsman",
-        "rating": "6"
+        "rating": "6",
+        "selected": false
     },
     {
         "playerId": "37",
@@ -293,7 +329,8 @@
         "name": "Kaustubh Kature",
         "Team Name": "Legends",
         "role": "Wicket Keeper Batsman",
-        "rating": "7.5"
+        "rating": "7.5",
+        "selected": false
     },
     {
         "playerId": "38",
@@ -301,7 +338,8 @@
         "name": "Anshu Ahirwar ",
         "Team Name": "New Bies Rising Stars",
         "role": "Wicket Keeper Batsman",
-        "rating": "10"
+        "rating": "10",
+        "selected": false
     },
     {
         "playerId": "39",
@@ -309,7 +347,8 @@
         "name": "Abhijeet Takmare",
         "Team Name": "Predators",
         "role": "Wicket Keeper Batsman",
-        "rating": "8"
+        "rating": "8",
+        "selected": false
     },
     {
         "playerId": "40",
@@ -317,7 +356,8 @@
         "name": "Shravan singh",
         "Team Name": "Dominating Warriors",
         "role": "Wicket Keeper Batsman",
-        "rating": "7"
+        "rating": "7",
+        "selected": false
     },
     {
         "playerId": "41",
@@ -325,7 +365,8 @@
         "name": "Nitin Lamba",
         "Team Name": "Legends",
         "role": "Wicket Keeper Batsman",
-        "rating": "7"
+        "rating": "7",
+        "selected": false
     },
     {
         "playerId": "42",
@@ -333,7 +374,8 @@
         "name": "Chandrakant Pandey",
         "Team Name": "Infinity Juggernauts",
         "role": "Wicket Keeper Batsman",
-        "rating": "7"
+        "rating": "7",
+        "selected": false
     },
     {
         "playerId": "43",
@@ -341,7 +383,8 @@
         "name": "Ashutosh Mishra ",
         "Team Name": "Hustlers",
         "role": "Wicket Keeper Batsman",
-        "rating": "7.5"
+        "rating": "7.5",
+        "selected": false
     },
     {
         "playerId": "44",
@@ -349,7 +392,8 @@
         "name": "Sohail Sheikh ",
         "Team Name": "Legends",
         "role": "Wicket Keeper Batsman",
-        "rating": "6"
+        "rating": "6",
+        "selected": false
     },
     {
         "playerId": "45",
@@ -357,7 +401,8 @@
         "name": "Neeraj Sharma",
         "Team Name": "Hustlers",
         "role": "Wicket Keeper Batsman",
-        "rating": "8.5"
+        "rating": "8.5",
+        "selected": false
     },
     {
         "playerId": "46",
@@ -365,7 +410,8 @@
         "name": "Vivek Kumar ",
         "Team Name": "Dominating Warriors",
         "role": "Wicket Keeper Batsman",
-        "rating": "9"
+        "rating": "9",
+        "selected": false
     },
     {
         "playerId": "47",
@@ -373,7 +419,8 @@
         "name": "Rupesh Routh",
         "Team Name": "Legends",
         "role": "Wicket Keeper Batsman",
-        "rating": "9"
+        "rating": "9",
+        "selected": false
     },
     {
         "playerId": "48",
@@ -381,7 +428,8 @@
         "name": "Ganesh Gujar",
         "Team Name": "New Bies Rising Stars",
         "role": "Wicket Keeper Batsman",
-        "rating": "8"
+        "rating": "8",
+        "selected": false
     },
     {
         "playerId": "49",
@@ -389,7 +437,8 @@
         "name": "Bharat Singh",
         "Team Name": "Dominating Warriors",
         "role": "All Rounder",
-        "rating": "7.5"
+        "rating": "7.5",
+        "selected": false
     },
     {
         "playerId": "50",
@@ -397,7 +446,8 @@
         "name": "Shailesh Yadav ",
         "Team Name": "Hustlers",
         "role": "All Rounder",
-        "rating": "9.5"
+        "rating": "9.5",
+        "selected": false
     },
     {
         "playerId": "51",
@@ -405,7 +455,8 @@
         "name": "Nikhil Chandak ",
         "Team Name": "Infinity Juggernauts",
         "role": "All Rounder",
-        "rating": "8.5"
+        "rating": "8.5",
+        "selected": false
     },
     {
         "playerId": "52",
@@ -413,7 +464,8 @@
         "name": "Atul Sharma",
         "Team Name": "Hustlers",
         "role": "All Rounder",
-        "rating": "10"
+        "rating": "10",
+        "selected": false
     },
     {
         "playerId": "53",
@@ -421,7 +473,8 @@
         "name": "Apurva Singh",
         "Team Name": "Dominating Warriors",
         "role": "All Rounder",
-        "rating": "10"
+        "rating": "10",
+        "selected": false
     },
     {
         "playerId": "54",
@@ -429,7 +482,8 @@
         "name": "Vivek Singh",
         "Team Name": "Predators",
         "role": "All Rounder",
-        "rating": "8"
+        "rating": "8",
+        "selected": false
     },
     {
         "playerId": "55",
@@ -437,7 +491,8 @@
         "name": "Ashish Patidar ",
         "Team Name": "Legends",
         "role": "All Rounder",
-        "rating": "10"
+        "rating": "10",
+        "selected": false
     },
     {
         "playerId": "56",
@@ -445,7 +500,8 @@
         "name": "Vinayak Kadam",
         "Team Name": "Hustlers",
         "role": "All Rounder",
-        "rating": "7.5"
+        "rating": "7.5",
+        "selected": false
     },
     {
         "playerId": "57",
@@ -453,7 +509,8 @@
         "name": "Rohit Rathi",
         "Team Name": "Dominating Warriors",
         "role": "All Rounder",
-        "rating": "8"
+        "rating": "8",
+        "selected": false
     },
     {
         "playerId": "58",
@@ -461,7 +518,8 @@
         "name": "Manish singh",
         "Team Name": "Predators",
         "role": "All Rounder",
-        "rating": "7.5"
+        "rating": "7.5",
+        "selected": false
     },
     {
         "playerId": "59",
@@ -469,7 +527,8 @@
         "name": "Pavan Vijjapu",
         "Team Name": "New Bies Rising Stars",
         "role": "All Rounder",
-        "rating": "8"
+        "rating": "8",
+        "selected": false
     },
     {
         "playerId": "60",
@@ -477,7 +536,8 @@
         "name": "Akshay Tomar",
         "Team Name": "Infinity Juggernauts",
         "role": "All Rounder",
-        "rating": "8"
+        "rating": "8",
+        "selected": false
     },
     {
         "playerId": "61",
@@ -485,7 +545,8 @@
         "name": "Vinod Beloshe ",
         "Team Name": "Legends",
         "role": "All Rounder",
-        "rating": "7"
+        "rating": "7",
+        "selected": false
     },
     {
         "playerId": "62",
@@ -493,7 +554,8 @@
         "name": "Rajiv Coomar ",
         "Team Name": "Legends",
         "role": "All Rounder",
-        "rating": "8"
+        "rating": "8",
+        "selected": false
     },
     {
         "playerId": "63",
@@ -501,7 +563,8 @@
         "name": "Mohit Mathur",
         "Team Name": "Hustlers",
         "role": "All Rounder",
-        "rating": "10"
+        "rating": "10",
+        "selected": false
     },
     {
         "playerId": "64",
@@ -509,7 +572,8 @@
         "name": "Mehul Parikh ",
         "Team Name": "Infinity Juggernauts",
         "role": "All Rounder",
-        "rating": "5"
+        "rating": "5",
+        "selected": false
     },
     {
         "playerId": "65",
@@ -517,7 +581,8 @@
         "name": "Ankush Madan",
         "Team Name": "Legends",
         "role": "All Rounder",
-        "rating": "10"
+        "rating": "10",
+        "selected": false
     },
     {
         "playerId": "66",
@@ -525,7 +590,8 @@
         "name": "Tushar Sachdeva",
         "Team Name": "Infinity Juggernauts",
         "role": "All Rounder",
-        "rating": "9"
+        "rating": "9",
+        "selected": false
     },
     {
         "playerId": "67",
@@ -533,7 +599,8 @@
         "name": "Anshul Bhatteja",
         "Team Name": "Predators",
         "role": "All Rounder",
-        "rating": "9"
+        "rating": "9",
+        "selected": false
     },
     {
         "playerId": "68",
@@ -541,7 +608,8 @@
         "name": "Avdhut ",
         "Team Name": "Hustlers",
         "role": "All Rounder",
-        "rating": "9"
+        "rating": "9",
+        "selected": false
     },
     {
         "playerId": "69",
@@ -549,7 +617,8 @@
         "name": "Gaurav Nathani",
         "Team Name": "Predators",
         "role": "All Rounder",
-        "rating": "10"
+        "rating": "10",
+        "selected": false
     },
     {
         "playerId": "70",
@@ -557,7 +626,8 @@
         "name": "Ritesh Notani",
         "Team Name": "New Bies Rising Stars",
         "role": "All Rounder",
-        "rating": "8.5"
+        "rating": "8.5",
+        "selected": false
     },
     {
         "playerId": "71",
@@ -565,7 +635,8 @@
         "name": "Ashish verma ",
         "Team Name": "Infinity Juggernauts",
         "role": "All Rounder",
-        "rating": "10"
+        "rating": "10",
+        "selected": false
     },
     {
         "playerId": "72",
@@ -573,7 +644,8 @@
         "name": "sarvesh khatri",
         "Team Name": "Infinity Juggernauts",
         "role": "All Rounder",
-        "rating": "9.5"
+        "rating": "9.5",
+        "selected": false
     },
     {
         "playerId": "73",
@@ -581,7 +653,8 @@
         "name": "Sumit Bhardwaj",
         "Team Name": "Infinity Juggernauts",
         "role": "All Rounder",
-        "rating": "8.5"
+        "rating": "8.5",
+        "selected": false
     },
     {
         "playerId": "74",
@@ -589,7 +662,8 @@
         "name": "Pankaj Saxena ",
         "Team Name": "Hustlers",
         "role": "All Rounder",
-        "rating": "9"
+        "rating": "9",
+        "selected": false
     },
     {
         "playerId": "75",
@@ -597,7 +671,8 @@
         "name": "Prateek Nepaliya ",
         "Team Name": "Predators",
         "role": "All Rounder",
-        "rating": "6"
+        "rating": "6",
+        "selected": false
     },
     {
         "playerId": "76",
@@ -605,7 +680,8 @@
         "name": "Shane srivastava ",
         "Team Name": "Legends",
         "role": "All Rounder",
-        "rating": "9"
+        "rating": "9",
+        "selected": false
     },
     {
         "playerId": "77",
@@ -613,7 +689,8 @@
         "name": "Dhaval Vyas",
         "Team Name": "Hustlers",
         "role": "All Rounder",
-        "rating": "6"
+        "rating": "6",
+        "selected": false
     },
     {
         "playerId": "78",
@@ -621,7 +698,8 @@
         "name": "Santosh Lad ",
         "Team Name": "Legends",
         "role": "All Rounder",
-        "rating": "8"
+        "rating": "8",
+        "selected": false
     },
     {
         "playerId": "79",
@@ -629,7 +707,8 @@
         "name": "Nilesh Wagh",
         "Team Name": "Infinity Juggernauts",
         "role": "All Rounder",
-        "rating": "8.5"
+        "rating": "8.5",
+        "selected": false
     },
     {
         "playerId": "80",
@@ -637,7 +716,8 @@
         "name": "Adi Vaibhav",
         "Team Name": "New Bies Rising Stars",
         "role": "All Rounder",
-        "rating": "6.5"
+        "rating": "6.5",
+        "selected": false
     },
     {
         "playerId": "81",
@@ -645,7 +725,8 @@
         "name": "Vipendra Singh",
         "Team Name": "Predators",
         "role": "All Rounder",
-        "rating": "6.5"
+        "rating": "6.5",
+        "selected": false
     },
     {
         "playerId": "82",
@@ -653,7 +734,8 @@
         "name": "Saurabh Manjramkar",
         "Team Name": "Predators",
         "role": "All Rounder",
-        "rating": "10"
+        "rating": "10",
+        "selected": false
     },
     {
         "playerId": "83",
@@ -661,7 +743,8 @@
         "name": "Gopal agrawal ",
         "Team Name": "Infinity Juggernauts",
         "role": "All Rounder",
-        "rating": "7"
+        "rating": "7",
+        "selected": false
     },
     {
         "playerId": "84",
@@ -669,7 +752,8 @@
         "name": "Nikhil Kanwar",
         "Team Name": "Hustlers",
         "role": "All Rounder",
-        "rating": "7"
+        "rating": "7",
+        "selected": false
     },
     {
         "playerId": "85",
@@ -677,7 +761,8 @@
         "name": "Sahil Bairagi",
         "Team Name": "Legends",
         "role": "All Rounder",
-        "rating": "6"
+        "rating": "6",
+        "selected": false
     },
     {
         "playerId": "86",
@@ -685,7 +770,8 @@
         "name": "Divyanshu Pathak",
         "Team Name": "Predators",
         "role": "All Rounder",
-        "rating": "8"
+        "rating": "8",
+        "selected": false
     },
     {
         "playerId": "87",
@@ -693,7 +779,8 @@
         "name": "Anil Prasad",
         "Team Name": "New Bies Rising Stars",
         "role": "All Rounder",
-        "rating": "6"
+        "rating": "6",
+        "selected": false
     },
     {
         "playerId": "88",
@@ -701,7 +788,8 @@
         "name": "Prashant Thanvi",
         "Team Name": "Legends",
         "role": "All Rounder",
-        "rating": "8"
+        "rating": "8",
+        "selected": false
     },
     {
         "playerId": "89",
@@ -709,7 +797,8 @@
         "name": "Gaurav Anand",
         "Team Name": "Dominating Warriors",
         "role": "All Rounder",
-        "rating": "9"
+        "rating": "9",
+        "selected": false
     },
     {
         "playerId": "90",
@@ -717,7 +806,8 @@
         "name": "Mayur Jagtap",
         "Team Name": "Legends",
         "role": "All Rounder",
-        "rating": "10"
+        "rating": "10",
+        "selected": false
     },
     {
         "playerId": "91",
@@ -725,7 +815,8 @@
         "name": "Pankaj M",
         "Team Name": "Legends",
         "role": "All Rounder",
-        "rating": "6"
+        "rating": "6",
+        "selected": false
     },
     {
         "playerId": "92",
@@ -733,7 +824,8 @@
         "name": "Swapnil C",
         "Team Name": "New Bies Rising Stars",
         "role": "All Rounder",
-        "rating": "8"
+        "rating": "8",
+        "selected": false
     },
     {
         "playerId": "93",
@@ -741,7 +833,8 @@
         "name": "Ranvijay",
         "Team Name": "New Bies Rising Stars",
         "role": "All Rounder",
-        "rating": "8"
+        "rating": "8",
+        "selected": false
     },
     {
         "playerId": "94",
@@ -749,6 +842,7 @@
         "name": "Sanjay ",
         "Team Name": "Predators",
         "role": "All Rounder",
-        "rating": "8.5"
+        "rating": "8.5",
+        "selected": false
     }
 ]

@@ -6,6 +6,30 @@
     flex-wrap: wrap;
 }
 
+app-header {}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: sticky;
+    top: 60px;
+    z-index: 1000;
+    background-color: aqua;
+    margin: 10px;
+
+    h1,
+    button,
+    .credits {
+        margin: 10px;
+    }
+
+    .credits {
+        margin: auto 0px;
+        width: 150px;
+    }
+}
+
 ul {
     padding-left: 15px;
 }
@@ -70,4 +94,11 @@ label {
 .player-detail {
     flex-grow: 1;
     flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+label {
+    flex-grow: 1;
+    cursor: pointer;
 }

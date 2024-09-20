@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
+import { FantasyLeagueService } from '../../services/fantasy-league.service';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,11 @@ import { Router, RouterLink } from '@angular/router';
 export class LoginComponent {
   loginForm!: FormGroup;
 
-  constructor(private fb: FormBuilder, private router: Router) { }
+  constructor(
+    private fb: FormBuilder,
+    private router: Router,
+    private fantasyLeagueService: FantasyLeagueService
+  ) { }
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
@@ -23,7 +28,10 @@ export class LoginComponent {
 
   onSubmit() {
     console.log(this.loginForm.value);
+    // if()
+    this.fantasyLeagueService.loginUser(this.loginForm.value.email, this.loginForm.value.password);
   }
+
   openRegistrationPage() {
     this.router.navigateByUrl("/signup");
   }
