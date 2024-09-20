@@ -32,7 +32,12 @@ export class MatchDayComponent implements OnInit {
   canMakeTeam() {
     const timestamp = Date.now();
     // console.log(timestamp);
-    const oneWeekInMilliseconds = 6 * 24 * 60 * 60 * 1000;
+    if (timestamp > 1726889430000) {
+      this.createTeam = true;
+      return true;
+    }
+    // console.log(timestamp);
+    const oneWeekInMilliseconds = 7 * 24 * 60 * 60 * 1000;
     // console.log(Math.round(Number(this.weekDay.cutOffTime) * 1000 - timestamp), this.weekDay.cutOffTime, Math.round(timestamp), oneWeekInMilliseconds);
     this.createTeam = Math.round(Number(this.weekDay.cutOffTime) * 1000 - timestamp) > oneWeekInMilliseconds;
     return this.createTeam;
