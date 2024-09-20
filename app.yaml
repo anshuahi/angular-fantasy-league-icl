@@ -5,14 +5,14 @@ instance_class: F1  # Optional: Define instance class for cost control (F1 is a 
 handlers:
   # Serve the main page (index.html)
   - url: /
-    static_files: docs/angular-fantasy-league-icl/browser/index.html
-    upload: docs/angular-fantasy-league-icl/browser/index.html
+    static_files: dist/angular-fantasy-league-icl/browser/index.html
+    upload: dist/angular-fantasy-league-icl/browser/index.html
 
   # Serve other static assets
   - url: /
-    static_dir: docs/angular-fantasy-league-icl
+    static_dir: dist/angular-fantasy-league-icl
 
   # Catch-all handler to redirect unmatched URLs to index.html (for Angular routing)
   - url: /.*
-    static_files: docs/angular-fantasy-league-icl/browser/index.html
-    upload: docs/angular-fantasy-league-icl/browser/index.html
+    static_files: dist/angular-fantasy-league-icl/browser/index.html
+    upload: dist/angular-fantasy-league-icl/browser/index.html
