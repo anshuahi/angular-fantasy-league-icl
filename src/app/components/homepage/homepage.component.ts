@@ -60,6 +60,9 @@ export class HomepageComponent implements OnInit {
         this.router.navigate(['/login']);
       }
     })
+
+    this.fantasyLeagueService.getUserDetails();
+
   }
 
 

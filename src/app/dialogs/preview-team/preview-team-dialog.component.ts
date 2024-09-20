@@ -23,7 +23,7 @@ export class PreviewTeamDialogComponent implements OnInit {
     public dialogRef: MatDialogRef<PreviewTeamDialogComponent>,
     private http: HttpClient,
     private router: Router,
-    @Inject(MAT_DIALOG_DATA) public data: { selectedPlayersList: PlayerDetail[], weekId: string },
+    @Inject(MAT_DIALOG_DATA) public data: { selectedPlayersList: PlayerDetail[], weekId: string, teamId: string },
     private fantasyLeagueService: FantasyLeagueService,
   ) { }
 
@@ -35,7 +35,7 @@ export class PreviewTeamDialogComponent implements OnInit {
   viceCaptain: string = '';
 
   ngOnInit(): void {
-    // console.log("preview data", this.data);
+    console.log("preview data", this.data);
     this.selectedPlayers = this.data?.selectedPlayersList
     // this.data = this.data?.sort((a, b) => a?.teamId.localeCompare(b?.teamId));
   }
@@ -77,7 +77,8 @@ export class PreviewTeamDialogComponent implements OnInit {
 
   saveTeam() {
     // console.log(this.selectedPlayers, this.captain, this.viceCaptain);
-    this.fantasyLeagueService.saveTeam(this.selectedPlayers, this.captain, this.viceCaptain, this.data.weekId).subscribe(
+    console.log(this.selectedPlayers, this.captain, this.viceCaptain, this.data.weekId);
+    this.fantasyLeagueService.saveTeam(this.selectedPlayers, this.captain, this.viceCaptain, this.data.weekId, this.data.teamId).subscribe(
       (response) => {
         // console.log(response);
         if (response.status === 200) {
