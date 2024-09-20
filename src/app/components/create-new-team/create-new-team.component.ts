@@ -10,6 +10,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { PlayerDetail } from '../../models/player-details.model';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-create-new-team',
@@ -23,7 +24,8 @@ export class CreateNewTeamComponent implements OnInit {
   constructor(
     private http: HttpClient,
     private playerDetailsService: FantasyLeagueService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private route: ActivatedRoute
   ) { }
 
   teamSize: number = 10;
@@ -34,13 +36,18 @@ export class CreateNewTeamComponent implements OnInit {
   creditsLeft: number = 80;
 
   selectedPlayers: string[] = [];
-
+  weekId!: string;
   ngOnInit(): void {
     setTimeout(() => {
       this.playerDetails = this.playerDetailsService.getPlayers();
       // console.log("this.playerDetails", this.playerDetails);
     }, 2000);
     this.playerDetailsSubject.next(this.playerDetails);
+
+    this.route.paramMap.subscribe(params => {
+      this.weekId = params.get('id')!;
+      console.log(this.weekId, params);
+    });
   }
 
   checkCondition(player: PlayerDetail): Observable<boolean> {
@@ -56,7 +63,7 @@ export class CreateNewTeamComponent implements OnInit {
     const selectedPlayersList = this.playerDetails.filter(player => player.selected);
     const dialogRef = this.dialog.open(PreviewTeamDialogComponent, {
       width: '350px',
-      data: selectedPlayersList  // Optional data passing
+      data: { selectedPlayersList, weekId: this.weekId }  // Optional data passing
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -65,7 +72,7 @@ export class CreateNewTeamComponent implements OnInit {
   }
 
   onCheckboxChange(selectedPlayer: PlayerDetail) {
-    console.log(selectedPlayer);
+    // console.log(selectedPlayer);
     if (this.selectedPlayers.includes(selectedPlayer.playerId)) {
       this.selectedPlayers = this.selectedPlayers.filter(player => player !== selectedPlayer.playerId);
       this.creditsLeft = this.creditsLeft + Number(selectedPlayer.rating)

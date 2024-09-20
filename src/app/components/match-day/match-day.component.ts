@@ -20,6 +20,6 @@ export class MatchDayComponent {
 
 
   goToCreateTeam() {
-    this.router.navigate(['/create-new-team']);  // Navigate to the /create-team URL
+    this.router.navigate(['/create-new-team', Number(this.weekDay?.weekId)]);  // Navigate to the /create-team URL
   }
 }

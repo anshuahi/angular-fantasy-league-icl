@@ -24,6 +24,11 @@ export class LoginComponent {
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required]
     });
+    this.fantasyLeagueService.authenticated$.subscribe(a => {
+      if (a) {
+        this.router.navigate(['/']);
+      }
+    })
   }
 
   onSubmit() {

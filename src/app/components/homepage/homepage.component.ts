@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { MatchDayComponent } from "../match-day/match-day.component";
 import { BehaviorSubject, Observable, of } from 'rxjs';
 import { FantasyLeagueService } from '../../services/fantasy-league.service';
+import { Router } from '@angular/router';
 // import { WeekDay } from '@angular/common';
 
 
@@ -43,13 +44,21 @@ export class HomepageComponent implements OnInit {
 
   weekDetailsSubject = new BehaviorSubject<WeekDetails[]>([]);
   weekDetails$: Observable<WeekDetails[]> = this.weekDetailsSubject.asObservable();
-  constructor(private fantasyLeagueService: FantasyLeagueService,) { }
+
+  constructor(private fantasyLeagueService: FantasyLeagueService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     this.fantasyLeagueService.getWeekDetails().subscribe(weekDetails => {
       this.weekDetailsSubject.next(weekDetails);
-      console.log(weekDetails)
     });
+
+    this.fantasyLeagueService.authenticated$.subscribe(a => {
+      if (!a) {
+        this.router.navigate(['/login']);
+      }
+    })
   }
 
 

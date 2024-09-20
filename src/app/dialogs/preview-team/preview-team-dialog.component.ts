@@ -16,10 +16,11 @@ import { PlayerDetail } from '../../models/player-details.model';
 })
 export class PreviewTeamDialogComponent implements OnInit {
 
+  teamsize = 10;
   constructor(
     public dialogRef: MatDialogRef<PreviewTeamDialogComponent>,
     private http: HttpClient,
-    @Inject(MAT_DIALOG_DATA) public data: PlayerDetail[],
+    @Inject(MAT_DIALOG_DATA) public data: { selectedPlayersList: PlayerDetail[], weekId: string },
     private fantasyLeagueService: FantasyLeagueService,
   ) { }
 
@@ -27,12 +28,13 @@ export class PreviewTeamDialogComponent implements OnInit {
   playerDetails$ = this.playerDetailsSubject.asObservable();
   selectedPlayers: any;
   playerDetails!: PlayerDetail[];
-  captain: string = "";
-  viceCaptain: string = "";
+  captain: string = '';
+  viceCaptain: string = '';
 
   ngOnInit(): void {
     console.log("preview data", this.data);
-    this.data = this.data?.sort((a, b) => a?.teamId.localeCompare(b?.teamId));
+    this.selectedPlayers = this.data?.selectedPlayersList
+    // this.data = this.data?.sort((a, b) => a?.teamId.localeCompare(b?.teamId));
   }
 
   onClose(): void {
@@ -53,24 +55,25 @@ export class PreviewTeamDialogComponent implements OnInit {
   }
 
   onCaptainCheckboxChange(selectedPlayer: PlayerDetail) {
-    console.log(selectedPlayer);
+    // console.log(selectedPlayer);
     if (this.captain === selectedPlayer.playerId) {
-      this.captain = "";
+      this.captain = '';
       return;
     }
     this.captain = selectedPlayer.playerId;
   }
 
   onViceCaptainCheckboxChange(selectedPlayer: PlayerDetail) {
-    console.log(selectedPlayer);
+    // console.log(selectedPlayer);
     if (this.viceCaptain === selectedPlayer.playerId) {
-      this.viceCaptain = "";
+      this.viceCaptain = '';
       return;
     }
     this.viceCaptain = selectedPlayer.playerId;
   }
 
   saveTeam() {
-    this.fantasyLeagueService.saveTeam();
+    console.log(this.selectedPlayers, this.captain, this.viceCaptain);
+    this.fantasyLeagueService.saveTeam(this.selectedPlayers, this.captain, this.viceCaptain, this.data.weekId);
   }
 }

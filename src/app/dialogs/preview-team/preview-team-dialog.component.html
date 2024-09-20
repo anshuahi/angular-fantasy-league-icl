@@ -1,12 +1,12 @@
-<div class="preview" *ngIf="data.length === 0">
+<div class="preview" *ngIf="selectedPlayers.length === 0">
     Please select players
 </div>
 
-<div class="preview" *ngIf="data.length > 0">
+<div class="preview" *ngIf="selectedPlayers.length > 0">
     <h3>Preview Your team</h3>
-    <p *ngIf="data.length < 10">Please select 10 players</p>
+    <p *ngIf="selectedPlayers.length < 10">Please select 10 players</p>
     <ul>
-        <li class="player-detail" *ngFor="let player of data">
+        <li class="player-detail" *ngFor="let player of selectedPlayers">
             <div>
                 <input type="checkbox" id="captain" [value]="player.name"
                     [disabled]="checkCaptainCondition(player) | async" (change)="onCaptainCheckboxChange(player)" />
@@ -23,6 +23,7 @@
         </li>
     </ul>
     <div class="save-team">
-        <button mat-raised-button [disabled]="data.length < 10" (click)="saveTeam()">Save Team</button>
+        <button mat-raised-button [disabled]="selectedPlayers.length < teamsize || !captain  || !viceCaptain "
+            (click)="saveTeam()">Save Team</button>
     </div>
 </div>

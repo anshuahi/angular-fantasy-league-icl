@@ -8,5 +8,5 @@ export const routes: Routes = [
     { path: '', component: HomepageComponent }, // Default route
     { path: 'login', component: LoginComponent },
     { path: 'register', component: SignupComponent },
-    { path: 'create-new-team', component: CreateNewTeamComponent },
+    { path: 'create-new-team/:id', component: CreateNewTeamComponent },
 ];
