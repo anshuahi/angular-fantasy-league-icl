@@ -6,6 +6,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatDialog } from '@angular/material/dialog';
 import { CreateTeamDialogComponent } from '../../dialogs/create-team-dialog/create-team-dialog.component';
 import { Router } from '@angular/router';
+import { FantasyLeagueService } from '../../services/fantasy-league.service';
 
 @Component({
   selector: 'app-match-day',
@@ -15,11 +16,17 @@ import { Router } from '@angular/router';
   styleUrl: './match-day.component.scss'
 })
 export class MatchDayComponent {
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+    private fantasyLeagueService: FantasyLeagueService
+  ) { }
   @Input() weekDay!: WeekDetails
 
 
   goToCreateTeam() {
     this.router.navigate(['/create-new-team', Number(this.weekDay?.weekId)]);  // Navigate to the /create-team URL
+  }
+
+  getTeam() {
+    this.fantasyLeagueService.getTeam(this.weekDay.weekId);
   }
 }

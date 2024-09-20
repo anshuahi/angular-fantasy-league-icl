@@ -57,7 +57,7 @@ export class CreateNewTeamComponent implements OnInit {
   }
 
   openDialog(): void {
-    const selectedPlayersList = this.playerDetails.filter(player => player.selected);
+    const selectedPlayersList = this.playerDetails?.filter(player => player.selected);
     const dialogRef = this.dialog.open(PreviewTeamDialogComponent, {
       width: '350px',
       data: { selectedPlayersList, weekId: this.weekId }  // Optional data passing

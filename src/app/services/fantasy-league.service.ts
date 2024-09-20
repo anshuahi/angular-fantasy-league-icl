@@ -10,6 +10,9 @@ import { FantasyTeamRequest } from '../models/fantasy-team-request.model';
   providedIn: 'root'
 })
 export class FantasyLeagueService {
+  getTeam(weekId: Number) {
+
+  }
 
   registerMessageSubject = new BehaviorSubject<string>('');
   registerMessage$ = this.registerMessageSubject.asObservable();
@@ -23,7 +26,8 @@ export class FantasyLeagueService {
   loginUrl = "api/users/login";
   signupUrl = "api/users/register";
   createTeamUrl = "api/fantasy/create-team";
-  base_url: string = "https://infinity-fantasy-league.et.r.appspot.com/";
+  base_url: string =
+    "https://infinity-fantasy-league.et.r.appspot.com/";
   // "http://localhost:8080/";
 
   authenticatedSubject = new BehaviorSubject<boolean>(false);
