@@ -23,7 +23,8 @@ export class FantasyLeagueService {
   loginUrl = "api/users/login";
   signupUrl = "api/users/register";
   createTeamUrl = "api/fantasy/create-team";
-  base_url: string = "http://localhost:8080/";
+  base_url: string = "https://infinity-fantasy-league.et.r.appspot.com/";
+  // "http://localhost:8080/";
 
   authenticatedSubject = new BehaviorSubject<boolean>(false);
   authenticated$ = this.authenticatedSubject.asObservable();
@@ -38,7 +39,7 @@ export class FantasyLeagueService {
     this.user = user;
   }
 
-  // "https://infinity-fantasy-league.et.r.appspot.com/";
+  // 
   constructor(private http: HttpClient) { }
 
   getPlayerList() {

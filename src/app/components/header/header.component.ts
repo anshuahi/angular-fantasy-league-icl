@@ -22,11 +22,11 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.fantasyLeagueService.authenticated$.subscribe(a => {
-      console.log("authenticated ", a)
+      // console.log("authenticated ", a)
       setTimeout(() => {
         this.user = this.fantasyLeagueService.getUser();
       }, 1000);
-      console.log(this.user);
+      // console.log(this.user);
     });
   }
   login = 'login';
