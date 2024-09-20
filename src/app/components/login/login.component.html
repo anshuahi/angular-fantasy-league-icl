@@ -1,9 +1,9 @@
 <div class="login-container">
 
-    <div *ngIf="registerMessage">
-        <h1>{{ registerMessage }}</h1>
-    </div>
     <div class="login-left">
+        <div class="message" *ngIf="registerMessage">
+            <h1>{{ registerMessage }}</h1>
+        </div>
         <h2>Login! 👋</h2>
         <form class="form-signin login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
             <label for="phone">Phone</label>

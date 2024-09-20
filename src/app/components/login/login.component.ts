@@ -22,6 +22,7 @@ export class LoginComponent {
   ) { }
 
   ngOnInit(): void {
+    // this.fantasyLeagueService.setRegisterSuccessMessage();
     this.loginForm = this.fb.group({
       phone: ['', Validators.required],
       password: ['', Validators.required]

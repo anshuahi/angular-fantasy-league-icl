@@ -15,9 +15,9 @@ export class FantasyLeagueService {
   registerMessage$ = this.registerMessageSubject.asObservable();
   setRegisterSuccessMessage() {
     this.registerMessageSubject.next("See you at Mantra!");
-    // setTimeout(() => {
-    //   this.registerMessageSubject.next('');
-    // }, 10000);
+    setTimeout(() => {
+      this.registerMessageSubject.next('');
+    }, 10000);
   }
 
   loginUrl = "api/users/login";

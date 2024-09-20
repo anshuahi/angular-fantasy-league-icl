@@ -1,8 +1,17 @@
 .login-container {
     display: flex;
+    flex-direction: column;
     height: calc(100vh - 80px);
     flex: 1;
     flex-grow: 1;
+}
+
+.message {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 60px;
+    color: #557ad9;
 }
 
 .login-left,

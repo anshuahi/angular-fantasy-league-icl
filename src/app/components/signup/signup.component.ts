@@ -50,6 +50,7 @@ export class SignupComponent {
         signupData.email, signupData.phone, signupData.password).subscribe(
           response => {
             if (response.status === 200) {
+              this.fantasyLeagueService.setRegisterSuccessMessage();
               this.router.navigateByUrl("/login");
             }
           }
