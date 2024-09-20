@@ -30,9 +30,7 @@ export class AppComponent implements OnInit {
       this.router.navigate(['/']);
     }
     this.fantasyLeagueService.getWeekDetails();
-    this.http.get<PlayerDetail[]>('assets/players.json').subscribe((response) => {
-      this.fantasyLeagueService.setPlayerDetails(response);
-      // console.log(response); // Debugging the fetched data
-    });
+    this.fantasyLeagueService.getPlayerList();
+
   }
 }

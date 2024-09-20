@@ -8,7 +8,7 @@
         <form class="form-signin login-form" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
 
             <label for="username">Username</label>
-            <input type="username" id="username" name="username" placeholder="test@atheros.ai"
+            <input type="username" id="username" name="username" placeholder="test@atheros.ai" maxlength="10"
                 formControlName="username">
             <div *ngIf="isFieldInvalid('username')" class="error">
                 <small *ngIf="signupForm.get('username')?.hasError('required')">Username is required</small>
@@ -27,7 +27,8 @@
             </div>
 
             <label for="phone">Phone</label>
-            <input type="phone" id="phone" name="phone" placeholder="test@atheros.ai" formControlName="phone">
+            <input type="phone" id="phone" name="phone" placeholder="test@atheros.ai" maxlength="10"
+                formControlName="phone">
             <div *ngIf="isFieldInvalid('phone')" class="error">
                 <small *ngIf="signupForm.get('phone')?.hasError('required')">Phone is required</small>
             </div>

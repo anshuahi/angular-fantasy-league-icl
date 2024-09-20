@@ -4,7 +4,7 @@
 
 <div class="preview" *ngIf="selectedPlayers.length > 0">
     <h3>Preview Your team</h3>
-    <p *ngIf="selectedPlayers.length < 10">Please select 10 players</p>
+    <p *ngIf="selectedPlayers.length < teamsize">Please select {{teamsize}} players</p>
     <ul>
         <li class="player-detail" *ngFor="let player of selectedPlayers">
             <div>

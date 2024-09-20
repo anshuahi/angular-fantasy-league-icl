@@ -12,7 +12,7 @@
                 <a routerLink="/register">Register</a>
             </li>
             <li *ngIf="authenticated$ | async">
-                <a>{{ user?.fullName }}</a>
+                <a>{{ user?.username }}</a>
             </li>
         </ul>
     </nav>

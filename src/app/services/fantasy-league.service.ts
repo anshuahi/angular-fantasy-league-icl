@@ -4,12 +4,17 @@ import { BehaviorSubject, map, Observable, of } from 'rxjs';
 import { WeekDetails } from '../components/homepage/homepage.component';
 import { PlayerDetail } from '../models/player-details.model';
 import { FantasyTeamRequest } from '../models/fantasy-team-request.model';
+import { User } from '../models/user.model';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class FantasyLeagueService {
+  getTeamByTeamId(teamId: string) {
+    const endPoint = "api/fantasy/";
+    return this.http.get<any>(this.base_url + endPoint + teamId);
+  }
 
   registerMessageSubject = new BehaviorSubject<string>('');
   registerMessage$ = this.registerMessageSubject.asObservable();
@@ -23,13 +28,26 @@ export class FantasyLeagueService {
   loginUrl = "api/users/login";
   signupUrl = "api/users/register";
   createTeamUrl = "api/fantasy/create-team";
-  base_url: string = "https://infinity-fantasy-league.et.r.appspot.com/";
-  // "http://localhost:8080/";
+  base_url: string =
+    // "https://infinity-fantasy-league.et.r.appspot.com/";
+    "http://localhost:8080/";
 
   authenticatedSubject = new BehaviorSubject<boolean>(false);
   authenticated$ = this.authenticatedSubject.asObservable();
-  user: any;
+  user!: User;
   playerDetails: PlayerDetail[] = [];
+
+  week0: WeekDetails = {
+    weekId: "0",
+    weekName: "Week-0",
+    cutOffTime: "1726884000",
+    team1: "NB",
+    team2: "HU",
+    team3: "LE",
+    team4: "IJ",
+    team5: "DW",
+    team6: "PR"
+  } as unknown as WeekDetails
 
   setPlayerDetails(playerDetails: PlayerDetail[]) {
     this.playerDetails = playerDetails;
@@ -39,13 +57,42 @@ export class FantasyLeagueService {
     this.user = user;
   }
 
+  getUserDetails() {
+    if (this.user) {
+      const endPoint = "api/users/";
+      this.http.get<any>(this.base_url + endPoint + this.user.phone).subscribe(
+        user => {
+          console.log(user);
+          this.user = user;
+          localStorage.setItem('user', JSON.stringify(this.user));
+        }
+      )
+    }
+  }
+
+
+  getTeamId(weekId: string) {
+    const idx = this.user.weekIds.findIndex(week => week === weekId);
+    return this.user.fantasyTeams[idx];
+  }
   // 
   constructor(private http: HttpClient) { }
 
   getPlayerList() {
     var endpoint = "api/players/all";
-    // return this.http.get<any[]>(this.base_url + endpoint);
-    return of(this.playerDetails);
+    return this.http.get<PlayerDetail[]>(this.base_url + endpoint)
+      ;
+    // .subscribe((response) => {
+    //   // this.fantasyLeagueService.setPlayerDetails(response);
+    //   this.playerDetails = response.map(player => ({
+    //     ...player, selected: true
+    //   }));
+    //   this.playerDetails
+    //   console.log(this.playerDetails);
+    //   // console.log(response); // Debugging the fetched data
+    // });
+    // // return this.http.get<any[]>(this.base_url + endpoint);
+    // return of(this.playerDetails);
   }
 
   getPlayers() {
@@ -56,13 +103,14 @@ export class FantasyLeagueService {
     var endpoint = "matches";
     return this.http.get<WeekDetails[]>(this.base_url + endpoint).pipe(
       map(matches => {
+        // matches.push(this.week0);
         const m = matches.sort((a, b) => Number(a.weekId) - Number(b.weekId))
         return m;
       })
     );
   }
 
-  saveTeam(selectedPlayers: PlayerDetail[], captain: string, viceCaptain: string, weekId: string) {
+  saveTeam(selectedPlayers: PlayerDetail[], captain: string, viceCaptain: string, weekId: string, teamId: string) {
     const players = selectedPlayers.map(player => player.playerId);
     players.push(captain);
     players.push(viceCaptain);
@@ -70,9 +118,10 @@ export class FantasyLeagueService {
     const fantasyTeam = {
       selectedPlayers: players,
       weekId: weekId,
-      userId: this.user?.phone
+      userId: this.user?.phone,
+      teamId: teamId
     } as FantasyTeamRequest
-    // console.log("fantasy team ", fantasyTeam);
+    console.log("fantasy team ", fantasyTeam);
     return this.http.post<any>(this.base_url + this.createTeamUrl, fantasyTeam);
   }
 

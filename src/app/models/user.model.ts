@@ -13,5 +13,7 @@ export interface User {
     password: string,
 
     fantasyTeams: string[],
+
+    weekIds: string[],
 }
 
