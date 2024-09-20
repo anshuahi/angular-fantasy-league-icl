@@ -3,16 +3,16 @@
     <nav>
         <ul>
             <li *ngIf="authenticated$ | async">
-                <a routerLink="/">Home</a>
+                <a>{{ user?.username }}</a>
+            </li>
+            <li *ngIf="authenticated$ | async">
+                <a (click)="logout()">Logout</a>
             </li>
             <li *ngIf="!(authenticated$ | async)">
                 <a routerLink="/login">Login</a>
             </li>
             <li *ngIf="!(authenticated$ | async)">
                 <a routerLink="/register">Register</a>
-            </li>
-            <li *ngIf="authenticated$ | async">
-                <a>{{ user?.username }}</a>
             </li>
         </ul>
     </nav>

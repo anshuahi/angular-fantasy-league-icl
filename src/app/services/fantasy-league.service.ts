@@ -29,8 +29,8 @@ export class FantasyLeagueService {
   signupUrl = "api/users/register";
   createTeamUrl = "api/fantasy/create-team";
   base_url: string =
-    "https://infinity-fantasy-league.et.r.appspot.com/";
-  // "http://localhost:8080/";
+    // "https://infinity-fantasy-league.et.r.appspot.com/";
+    "http://localhost:8080/";
 
   authenticatedSubject = new BehaviorSubject<boolean>(false);
   authenticated$ = this.authenticatedSubject.asObservable();
@@ -62,7 +62,7 @@ export class FantasyLeagueService {
       const endPoint = "api/users/";
       this.http.get<any>(this.base_url + endPoint + this.user.phone).subscribe(
         user => {
-          console.log(user);
+          // console.log(user);
           this.user = user;
           localStorage.setItem('user', JSON.stringify(this.user));
         }

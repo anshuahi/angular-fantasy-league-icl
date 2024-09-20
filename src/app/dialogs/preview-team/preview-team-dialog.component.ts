@@ -35,9 +35,9 @@ export class PreviewTeamDialogComponent implements OnInit {
   viceCaptain: string = '';
 
   ngOnInit(): void {
-    console.log("preview data", this.data);
+    // console.log("preview data", this.data);
     this.selectedPlayers = this.data?.selectedPlayersList
-    console.log(this.selectedPlayers);
+    // console.log(this.selectedPlayers);
     // this.data = this.data?.sort((a, b) => a?.teamId.localeCompare(b?.teamId));
   }
 
@@ -78,7 +78,7 @@ export class PreviewTeamDialogComponent implements OnInit {
 
   saveTeam() {
     // console.log(this.selectedPlayers, this.captain, this.viceCaptain);
-    console.log(this.selectedPlayers, this.captain, this.viceCaptain, this.data.weekId);
+    // console.log(this.selectedPlayers, this.captain, this.viceCaptain, this.data.weekId);
     this.fantasyLeagueService.saveTeam(this.selectedPlayers, this.captain, this.viceCaptain, this.data.weekId, this.data.teamId).subscribe(
       (response) => {
         // console.log(response);

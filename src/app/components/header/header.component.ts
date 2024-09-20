@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { FantasyLeagueService } from '../../services/fantasy-league.service';
 
@@ -12,12 +12,19 @@ import { FantasyLeagueService } from '../../services/fantasy-league.service';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent implements OnInit {
+  logout() {
+    console.log("logout");
+    localStorage.removeItem("user");
+    this.fantasyLeagueService.authenticatedSubject.next(false)
+    this.router.navigate(['/login']);
+  }
 
   authenticated$ = this.fantasyLeagueService.authenticated$;
   user = this.fantasyLeagueService.getUser();
 
   constructor(
-    private fantasyLeagueService: FantasyLeagueService
+    private fantasyLeagueService: FantasyLeagueService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {

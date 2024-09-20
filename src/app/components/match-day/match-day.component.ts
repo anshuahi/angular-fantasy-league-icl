@@ -19,11 +19,24 @@ export class MatchDayComponent implements OnInit {
   constructor(private router: Router,
     private fantasyLeagueService: FantasyLeagueService
   ) { }
+
+  createTeam = false;
+
   ngOnInit(): void {
     this.getTeam();
+    this.canMakeTeam();
   }
   @Input() weekDay!: WeekDetails
   teamId!: string;
+
+  canMakeTeam() {
+    const timestamp = Date.now();
+    // console.log(timestamp);
+    const oneWeekInMilliseconds = 6 * 24 * 60 * 60 * 1000;
+    // console.log(Math.round(Number(this.weekDay.cutOffTime) * 1000 - timestamp), this.weekDay.cutOffTime, Math.round(timestamp), oneWeekInMilliseconds);
+    this.createTeam = Math.round(Number(this.weekDay.cutOffTime) * 1000 - timestamp) > oneWeekInMilliseconds;
+    return this.createTeam;
+  }
 
 
   goToCreateTeam() {
@@ -36,6 +49,6 @@ export class MatchDayComponent implements OnInit {
 
   getTeam() {
     this.teamId = this.fantasyLeagueService.getTeamId(this.weekDay.weekId.toString());
-    console.log("teamId", this.teamId)
+    // console.log("teamId", this.teamId)
   }
 }

@@ -51,7 +51,7 @@ export class HomepageComponent implements OnInit {
 
   ngOnInit(): void {
     this.fantasyLeagueService.getWeekDetails().subscribe(weekDetails => {
-      console.log(weekDetails);
+      // console.log(weekDetails);
       this.weekDetailsSubject.next(weekDetails);
     });
 
