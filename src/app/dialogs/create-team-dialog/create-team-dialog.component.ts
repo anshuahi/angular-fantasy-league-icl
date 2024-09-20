@@ -4,9 +4,10 @@ import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatSelectModule } from '@angular/material/select';
 import { BehaviorSubject } from 'rxjs';
-import { PlayerDetail, PlayerDetailsService } from '../../services/player-details.service';
+import { FantasyLeagueService } from '../../services/fantasy-league.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { PlayerDetail } from '../../models/player-details.model';
 
 @Component({
   selector: 'app-create-team-dialog',
@@ -19,7 +20,7 @@ export class CreateTeamDialogComponent implements OnInit {
   constructor(
     public dialogRef: MatDialogRef<CreateTeamDialogComponent>,
     private http: HttpClient,
-    private playerDetailsService: PlayerDetailsService,
+    private playerDetailsService: FantasyLeagueService,
   ) { }
 
   playerDetailsSubject = new BehaviorSubject<PlayerDetail[]>([]);
@@ -28,8 +29,8 @@ export class CreateTeamDialogComponent implements OnInit {
   playerDetails!: PlayerDetail[];
 
   ngOnInit(): void {
-    this.playerDetails = this.playerDetailsService.getPlayerList();
-    this.playerDetailsSubject.next(this.playerDetails);
+    // this.playerDetails = this.playerDetailsService.getPlayerList();
+    // this.playerDetailsSubject.next(this.playerDetails);
   }
 
   onClose(): void {

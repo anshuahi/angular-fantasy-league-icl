@@ -1,0 +1,36 @@
+<div>
+    <div class="header">
+        <button mat-raised-button (click)="openDialog()"> Preview</button>
+        <h1>Create your Team</h1>
+        <div class="credits">
+            <h6>
+                Credits Left: {{creditsLeft}}
+            </h6>
+            <h6>Players Selected: {{selectedPlayers.length}} </h6>
+        </div>
+    </div>
+    <div class="all-teams">
+
+        <div class="team-info card" *ngFor="let teamId of teams">
+            <div class="title">
+                <h3>{{ teamId | teamName}} </h3>
+            </div>
+            <ul class="player-list">
+                <li class="select-player" *ngFor="let item of filteredItems(teamId)">
+                    <div class="player-detail">
+                        <input type="checkbox" [id]="item.playerId" [value]="item.name"
+                            [disabled]="checkCondition(item) | async" (change)="onCheckboxChange(item)" />
+                        <!-- <div class="player-name" for> -->
+                        <label [for]="item.playerId">
+                            {{ item.name }}
+
+                        </label>
+                    </div>
+                    <div>
+                        {{item.rating}}
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -2,14 +2,17 @@
     <h2 class="title">Fantasy League</h2>
     <nav>
         <ul>
-            <li>
+            <li *ngIf="authenticated$ | async">
                 <a routerLink="/">Home</a>
             </li>
-            <li>
+            <li *ngIf="!(authenticated$ | async)">
                 <a routerLink="/login">Login</a>
             </li>
-            <li>
+            <li *ngIf="!(authenticated$ | async)">
                 <a routerLink="/register">Register</a>
+            </li>
+            <li *ngIf="authenticated$ | async">
+                <a>{{ user?.fullName }}</a>
             </li>
         </ul>
     </nav>

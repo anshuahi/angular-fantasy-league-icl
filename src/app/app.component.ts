@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./components/header/header.component";
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { WeekDetailsService } from './services/week-details.service';
-import { PlayerDetail, PlayerDetailsService } from './services/player-details.service';
+import { FantasyLeagueService } from './services/fantasy-league.service';
+import { PlayerDetail } from './models/player-details.model';
 
 @Component({
   selector: 'app-root',
@@ -14,23 +14,25 @@ import { PlayerDetail, PlayerDetailsService } from './services/player-details.se
 })
 export class AppComponent implements OnInit {
   title = 'angular-fantasy-league-icl';
+  authenticated$ = this.fantasyLeagueService.authenticated$;
 
   constructor(
-    private weekdayService: WeekDetailsService,
+    private fantasyLeagueService: FantasyLeagueService,
     private http: HttpClient,
-    private playerDetailsService: PlayerDetailsService
+    private router: Router
   ) { }
 
   ngOnInit(): void {
-    this.weekdayService.getWeekDetails();
+    const user = localStorage.getItem('user');
+    if (user) {
+      // console.log(user);
+      this.fantasyLeagueService.setUserAuthentication(user);
+      this.router.navigate(['/']);
+    }
+    this.fantasyLeagueService.getWeekDetails();
     this.http.get<PlayerDetail[]>('assets/players.json').subscribe((response) => {
-      // this.data = response;
-      // response.map(player => {
-      //   player.
-      // })
-      console.log(response); // Debugging the fetched data
+      this.fantasyLeagueService.setPlayerDetails(response);
+      // console.log(response); // Debugging the fetched data
     });
   }
-
-
 }
