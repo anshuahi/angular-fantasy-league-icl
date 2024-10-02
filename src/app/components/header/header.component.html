@@ -1,5 +1,11 @@
 <header>
-    <h2 class="title">Fantasy League</h2>
+    <div class="title">
+        <h2>
+            <a routerLink="/register">
+                Fantasy League
+            </a>
+        </h2>
+    </div>
     <nav>
         <ul>
             <li *ngIf="authenticated$ | async">

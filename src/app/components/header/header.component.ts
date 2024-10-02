@@ -12,12 +12,6 @@ import { FantasyLeagueService } from '../../services/fantasy-league.service';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent implements OnInit {
-  logout() {
-    console.log("logout");
-    localStorage.removeItem("user");
-    this.fantasyLeagueService.authenticatedSubject.next(false)
-    this.router.navigate(['/login']);
-  }
 
   authenticated$ = this.fantasyLeagueService.authenticated$;
   user = this.fantasyLeagueService.getUser();
@@ -37,4 +31,15 @@ export class HeaderComponent implements OnInit {
     });
   }
   login = 'login';
+
+  homePage() {
+    console.log("go to homepage")
+    this.router.navigate(['/']);
+  }
+  logout() {
+    console.log("logout");
+    localStorage.removeItem("user");
+    this.fantasyLeagueService.authenticatedSubject.next(false)
+    this.router.navigate(['/login']);
+  }
 }

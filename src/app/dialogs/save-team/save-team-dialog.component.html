@@ -1,0 +1,33 @@
+<div class="preview" *ngIf="selectedPlayers.length === 0">
+    Please select players
+</div>
+
+<div class="preview" *ngIf="selectedPlayers.length > 0">
+    <div style="display: flex; flex-direction: row; justify-content: space-between;">
+        <h3>Save Your team</h3>
+        <button mat-raised-button [disabled]="selectedPlayers.length < teamsize || !captain  || !viceCaptain "
+            (click)="saveTeam()">Save</button>
+    </div>
+    <p *ngIf="selectedPlayers.length < teamsize">Please select {{teamsize}} players</p>
+    <ul>
+        <li class="player-detail" *ngFor="let player of selectedPlayers">
+            <div>
+                <input type="checkbox" id="captain" [value]="player.name"
+                    [disabled]="checkCaptainCondition(player) | async" (change)="onCaptainCheckboxChange(player)" />
+                <label for="captain">C</label>
+            </div>
+            <div class="vc">
+                <input type="checkbox" id="captain" [value]="player.name"
+                    [disabled]="checkViceCaptainCondition(player) | async"
+                    (change)="onViceCaptainCheckboxChange(player)" />
+                <label for="captain">VC</label>
+            </div>
+
+            <label>{{ player.name | titlecase }} ({{player.teamId}}) </label>
+        </li>
+    </ul>
+    <div class="save-team">
+        <button mat-raised-button [disabled]="selectedPlayers.length < teamsize || !captain  || !viceCaptain "
+            (click)="saveTeam()">Save Team</button>
+    </div>
+</div>

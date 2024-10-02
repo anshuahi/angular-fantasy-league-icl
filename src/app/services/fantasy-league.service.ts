@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, map, Observable, of } from 'rxjs';
-import { WeekDetails } from '../components/homepage/homepage.component';
+import { MatchDetailsResponse, WeekDetails } from '../components/homepage/homepage.component';
 import { PlayerDetail } from '../models/player-details.model';
 import { FantasyTeamRequest } from '../models/fantasy-team-request.model';
 import { User } from '../models/user.model';
@@ -11,9 +11,19 @@ import { User } from '../models/user.model';
   providedIn: 'root'
 })
 export class FantasyLeagueService {
+
   getTeamByTeamId(teamId: string) {
     const endPoint = "api/fantasy/";
     return this.http.get<any>(this.base_url + endPoint + teamId);
+  }
+
+  getTeamByWeekId(weekId: string) {
+    const endPoint = "api/fantasy/get-team/";
+    const body = {
+      weekId: weekId,
+      userId: this.user.phone
+    }
+    return this.http.get<any>(this.base_url + endPoint + weekId + "/" + this.user.phone);
   }
 
   registerMessageSubject = new BehaviorSubject<string>('');
@@ -29,8 +39,8 @@ export class FantasyLeagueService {
   signupUrl = "api/users/register";
   createTeamUrl = "api/fantasy/create-team";
   base_url: string =
-    "https://infinity-fantasy-league.et.r.appspot.com/";
-  // "http://localhost:8080/";
+    // "https://infinity-fantasy-league.et.r.appspot.com/";
+    "http://localhost:8080/";
 
   authenticatedSubject = new BehaviorSubject<boolean>(false);
   authenticated$ = this.authenticatedSubject.asObservable();
@@ -81,18 +91,11 @@ export class FantasyLeagueService {
   getPlayerList() {
     var endpoint = "api/players/all";
     return this.http.get<PlayerDetail[]>(this.base_url + endpoint)
-      ;
-    // .subscribe((response) => {
-    //   // this.fantasyLeagueService.setPlayerDetails(response);
-    //   this.playerDetails = response.map(player => ({
-    //     ...player, selected: true
-    //   }));
-    //   this.playerDetails
-    //   console.log(this.playerDetails);
-    //   // console.log(response); // Debugging the fetched data
-    // });
-    // // return this.http.get<any[]>(this.base_url + endpoint);
-    // return of(this.playerDetails);
+      .subscribe((response: PlayerDetail[]) => {
+        this.playerDetails = response.sort(
+          (a, b) => (a.name).localeCompare(b.name)
+        );
+      })
   }
 
   getPlayers() {
@@ -100,14 +103,44 @@ export class FantasyLeagueService {
   }
 
   getWeekDetails(): Observable<WeekDetails[]> {
-    var endpoint = "matches";
-    return this.http.get<WeekDetails[]>(this.base_url + endpoint).pipe(
-      map(matches => {
-        // matches.push(this.week0);
-        const m = matches.sort((a, b) => Number(a.weekId) - Number(b.weekId))
-        return m;
+    var endpoint = "matches/all-matches";
+    return this.http.get<MatchDetailsResponse>(this.base_url + endpoint).pipe(
+      map(response => {
+        if (response.status === 200) {
+          const matches = response?.matchesPerWeek || [];
+          // matches.push(this.week0);
+          console.log(response)
+          const m = matches.sort((a, b) => Number(a.weekId) - Number(b.weekId))
+          return m;
+        }
+        else {
+          return response?.matchesPerWeek;
+        }
       })
     );
+  }
+
+  getLeaderboardDetails(weekId: string) {
+    console.log("get leaderboard");
+    var endpoint = "api/leaderboard/weekly/" + weekId;
+    return this.http.get<any>(this.base_url + endpoint).
+      subscribe(a => console.log(a));
+    // pipe(
+    //   map(response => {
+    //     console.log(response);
+    //     // if (response.status === 200) {
+    //     //   const matches = response?.matchesPerWeek || [];
+    //     //   // matches.push(this.week0);
+    //     //   console.log(response)
+    //     //   const m = matches.sort((a, b) => Number(a.weekId) - Number(b.weekId))
+    //     //   return m;
+    //     // }
+    //     // else {
+    //     //   return response?.matchesPerWeek;
+    //     // }
+    //     return response;
+    //   })
+    // );
   }
 
   saveTeam(selectedPlayers: PlayerDetail[], captain: string, viceCaptain: string, weekId: string, teamId: string) {

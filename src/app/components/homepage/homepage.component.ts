@@ -30,6 +30,13 @@ export interface WeekDetails {
   team6: string,
   weekId: Number,
   weekName: string,
+  status?: string,
+}
+
+export interface MatchDetailsResponse {
+  status: Number,
+  message: string,
+  matchesPerWeek: WeekDetails[],
 }
 
 
@@ -51,7 +58,7 @@ export class HomepageComponent implements OnInit {
 
   ngOnInit(): void {
     this.fantasyLeagueService.getWeekDetails().subscribe(weekDetails => {
-      // console.log(weekDetails);
+      console.log(weekDetails);
       this.weekDetailsSubject.next(weekDetails);
     });
 
@@ -60,6 +67,8 @@ export class HomepageComponent implements OnInit {
         this.router.navigate(['/login']);
       }
     })
+
+    this.fantasyLeagueService.getLeaderboardDetails("1");
 
     this.fantasyLeagueService.getUserDetails();
 

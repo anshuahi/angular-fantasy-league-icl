@@ -19,6 +19,12 @@ export class SignupComponent {
   ) { }
 
   ngOnInit(): void {
+
+    this.fantasyLeagueService.authenticated$.subscribe(a => {
+      if (a) {
+        this.router.navigate(['/']);
+      }
+    })
     this.signupForm = this.fb.group({
       username: ['', Validators.required],
       fullName: ['', Validators.required],

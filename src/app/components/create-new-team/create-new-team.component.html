@@ -1,6 +1,6 @@
 <div>
     <div class="header">
-        <button mat-raised-button (click)="openDialog()"> Preview</button>
+        <button mat-raised-button (click)="openDialog()"> Save Team</button>
         <h1>Create your Team</h1>
         <div class="credits">
             <h6>
@@ -20,7 +20,6 @@
                     <div class="player-detail">
                         <input type="checkbox" [id]="item.playerId" [value]="item.name"
                             [disabled]="checkCondition(item) | async" (change)="onCheckboxChange(item)" />
-                        <!-- <div class="player-name" for> -->
                         <label [for]="item.playerId">
                             {{ item.name }}
 
