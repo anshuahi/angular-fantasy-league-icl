@@ -1,29 +1,22 @@
-<div class="preview" *ngIf="selectedPlayers.length === 0">
-    Please select players
-</div>
+<div class="preview">
+    <div class="title">
+        <header style="flex-grow: 1; margin: auto;">{{data.leaderboardUser.username}}</header>
+        <div *ngIf="data.weekStatus == 'COMPLETED'">{{ data.totalPoints.toFixed(2) }}</div>
+        <button mat-raised-button *ngIf="data.weekStatus == 'IN_PROGRESS'" (click)="goToCreateTeam()">Edit</button>
+    </div>
 
-<div class="preview" *ngIf="selectedPlayers.length > 0">
-    <h3>Preview Your team</h3>
-    <p *ngIf="selectedPlayers.length < teamsize">Please select {{teamsize}} players</p>
-    <ul>
-        <li class="player-detail" *ngFor="let player of selectedPlayers">
-            <div>
-                <input type="checkbox" id="captain" [value]="player.name"
-                    [disabled]="checkCaptainCondition(player) | async" (change)="onCaptainCheckboxChange(player)" />
-                <label for="captain">C</label>
-            </div>
-            <div class="vc">
-                <input type="checkbox" id="captain" [value]="player.name"
-                    [disabled]="checkViceCaptainCondition(player) | async"
-                    (change)="onViceCaptainCheckboxChange(player)" />
-                <label for="captain">VC</label>
-            </div>
-
-            <label>{{ player.name | titlecase }} ({{player.teamId}}) </label>
-        </li>
-    </ul>
-    <div class="save-team">
-        <button mat-raised-button [disabled]="selectedPlayers.length < teamsize || !captain  || !viceCaptain "
-            (click)="saveTeam()">Save Team</button>
+    <div>
+        <ul>
+            <li *ngFor="let player of data.playerMatchPoints">
+                <div class="player-preview">
+                    <h6 style="flex-grow: 1; padding: 4px;">
+                        {{ player.playerName }} ({{player.playerTeam}})
+                        <span *ngIf="player.playerId == data.captainId" style="color: rgb(203, 16, 44);">(c)</span>
+                        <span *ngIf="player.playerId == data.viceCaptainId" style="color: rgb(80, 49, 203);">(vc)</span>
+                    </h6>
+                    <div *ngIf="data.weekStatus == 'COMPLETED'" class="points">{{player.totalPoints.toFixed(2)}} </div>
+                </div>
+            </li>
+        </ul>
     </div>
 </div>

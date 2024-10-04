@@ -7,7 +7,9 @@ import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { FantasyLeagueService } from '../../services/fantasy-league.service';
 import { CommonModule } from '@angular/common';
-import { LeaderboardDialogComponent } from '../../dialogs/leaderboard-dialog/leaderboard-dialog.component';
+import { LeaderboardFantasyTeam, MatchStatus } from '../../models/leaderboard-response.mode';
+import { BehaviorSubject } from 'rxjs';
+import { PreviewTeamDialogComponent } from '../../dialogs/preview-team/preview-team-dialog.component';
 
 @Component({
   selector: 'app-match-day',
@@ -23,11 +25,31 @@ export class MatchDayComponent implements OnInit {
     public dialog: MatDialog,
   ) { }
 
+  previewTeamSubject = new BehaviorSubject<boolean>(false);
+  previewTeam$ = this.previewTeamSubject.asObservable();
+  previewTeam!: LeaderboardFantasyTeam;
+  showLeaderBoard = false;
+  showCreateEdit = false;
+  showComingUp = false;
+  showTeamPreview = false;
+  showMatchDayDetails = false;
+
   createTeam = false;
+  readonly MatchStatus = MatchStatus;
 
   ngOnInit(): void {
-    this.teamId = this.fantasyLeagueService.getTeamId(this.weekDay.weekId.toString());
-    this.getTeam();
+    this.showLeaderBoard = this.weekDay.status == MatchStatus.COMPLETED;
+    this.showCreateEdit = this.weekDay.status == MatchStatus.IN_PROGRESS;
+    this.showComingUp = this.weekDay.status == MatchStatus.COMING_UP;
+    if (this.weekDay.status !== MatchStatus.COMING_UP.toString()) {
+      this.fantasyLeagueService.getTeamByWeekId(this.weekDay.weekId.toString()).subscribe(
+        (team: LeaderboardFantasyTeam) => {
+          if (team.weekStatus) {
+            this.previewTeam = team;
+          }
+        }
+      )
+    }
   }
 
   @Input() weekDay!: WeekDetails
@@ -38,20 +60,18 @@ export class MatchDayComponent implements OnInit {
     this.router.navigate(['/create-new-team', Number(this.weekDay?.weekId)]);  // Navigate to the /create-team URL
   }
 
-  previewTeam() {
-
+  previewYourTeam() {
+    const dialogRef = this.dialog.open(PreviewTeamDialogComponent, {
+      width: '250px',
+      data: this.previewTeam // Optional data passing
+    });
   }
 
   getTeam() {
     this.teamId = this.fantasyLeagueService.getTeamId(this.weekDay.weekId.toString());
-    // console.log("teamId", this.teamId)
   }
 
   openLeaderBoard() {
     this.router.navigate(['/leaderboard', Number(this.weekDay?.weekId)]);
-    // const dialogRef = this.dialog.open(LeaderboardDialogComponent, {
-    //   width: '350px',
-    //   data: { weekId: this.weekDay?.weekId }  // Optional data passing
-    // });
   }
 }

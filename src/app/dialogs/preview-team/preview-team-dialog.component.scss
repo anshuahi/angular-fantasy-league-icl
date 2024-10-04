@@ -4,54 +4,25 @@
 
 ul {
     padding: 0 10px;
+    list-style: none;
 }
 
-p {
-    font-size: small;
-    margin: auto;
-    color: red;
-    margin-left: 20px;
+.player-preview {
+    border-top: 1px solid red;
+    border-bottom: 1px solid red;
+    display: flex;
+    flex-direction: row;
 }
 
-h3 {
-    margin: auto;
+.title {
     text-align: center;
-    margin-bottom: 10px;
-}
-
-.player-detail {
+    font-size: large;
+    padding-bottom: 20px;
+    color: #d73f3f;
     display: flex;
     flex-direction: row;
-    padding: 3px;
-    border: 1px solid red;
-    margin: 2px;
-    border-radius: 15px;
-    background: aliceblue;
 }
 
-label {
-    flex-grow: 1;
-}
-
-input {
-    margin-right: 2px;
-    margin-left: 10px;
-}
-
-.vc {
-    margin-right: 10px;
-}
-
-.save-team {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-button {
-    background-color: red;
-}
-
-.mat-mdc-raised-button:not(:disabled) {
-    background-color: #60eeee;
+h6 {
+    margin: auto 0px !important;
 }

@@ -1,10 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, map, Observable, of } from 'rxjs';
+import { BehaviorSubject, map, Observable, of, pipe } from 'rxjs';
 import { MatchDetailsResponse, WeekDetails } from '../components/homepage/homepage.component';
 import { PlayerDetail } from '../models/player-details.model';
 import { FantasyTeamRequest } from '../models/fantasy-team-request.model';
 import { User } from '../models/user.model';
+import { LeaderboardFantasyTeam, LeaderboardResponse } from '../models/leaderboard-response.mode';
 
 
 @Injectable({
@@ -23,7 +24,7 @@ export class FantasyLeagueService {
       weekId: weekId,
       userId: this.user.phone
     }
-    return this.http.get<any>(this.base_url + endPoint + weekId + "/" + this.user.phone);
+    return this.http.get<LeaderboardFantasyTeam>(this.base_url + endPoint + weekId + "/" + this.user.phone);
   }
 
   registerMessageSubject = new BehaviorSubject<string>('');
@@ -82,6 +83,7 @@ export class FantasyLeagueService {
 
 
   getTeamId(weekId: string) {
+    // console.log(this.user);
     const idx = this.user.weekIds.findIndex(week => week === weekId);
     return this.user.fantasyTeams[idx];
   }
@@ -94,7 +96,17 @@ export class FantasyLeagueService {
       .subscribe((response: PlayerDetail[]) => {
         this.playerDetails = response.sort(
           (a, b) => (a.name).localeCompare(b.name)
-        );
+        ).map(resp => {
+          return {
+            playerId: resp.playerId.toString(),
+            teamId: resp.teamId,
+            name: resp.name,
+            teamName: resp.teamName,
+            role: resp.role,
+            rating: resp.rating,
+            selected: resp.selected
+          }
+        });
       })
   }
 
@@ -108,8 +120,6 @@ export class FantasyLeagueService {
       map(response => {
         if (response.status === 200) {
           const matches = response?.matchesPerWeek || [];
-          // matches.push(this.week0);
-          console.log(response)
           const m = matches.sort((a, b) => Number(a.weekId) - Number(b.weekId))
           return m;
         }
@@ -121,26 +131,8 @@ export class FantasyLeagueService {
   }
 
   getLeaderboardDetails(weekId: string) {
-    console.log("get leaderboard");
     var endpoint = "api/leaderboard/weekly/" + weekId;
-    return this.http.get<any>(this.base_url + endpoint).
-      subscribe(a => console.log(a));
-    // pipe(
-    //   map(response => {
-    //     console.log(response);
-    //     // if (response.status === 200) {
-    //     //   const matches = response?.matchesPerWeek || [];
-    //     //   // matches.push(this.week0);
-    //     //   console.log(response)
-    //     //   const m = matches.sort((a, b) => Number(a.weekId) - Number(b.weekId))
-    //     //   return m;
-    //     // }
-    //     // else {
-    //     //   return response?.matchesPerWeek;
-    //     // }
-    //     return response;
-    //   })
-    // );
+    return this.http.get<LeaderboardResponse>(this.base_url + endpoint)
   }
 
   saveTeam(selectedPlayers: PlayerDetail[], captain: string, viceCaptain: string, weekId: string, teamId: string) {
@@ -154,7 +146,7 @@ export class FantasyLeagueService {
       userId: this.user?.phone,
       teamId: teamId
     } as FantasyTeamRequest
-    console.log("fantasy team ", fantasyTeam);
+    // console.log("fantasy team ", fantasyTeam);
     return this.http.post<any>(this.base_url + this.createTeamUrl, fantasyTeam);
   }
 

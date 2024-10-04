@@ -11,14 +11,13 @@
     </div>
 
     <div class="actions">
-        <button type="button" class="btn create" (click)="goToCreateTeam()" [hidden]="weekDay.status != 'IN_PROGRESS'">
+        <button type="button" class="btn create" (click)="goToCreateTeam()" *ngIf="showCreateEdit">
             Create/Edit</button>
         <button type="button" class="btn create" (click)="openLeaderBoard()"
-            *ngIf="weekDay.status == 'COMPLETED'">LeaderBoard</button>
-        <button type="button" class="btn btn-info" (click)="previewTeam()" *ngIf="weekDay.status !== 'COMING_UP'">Team
+            *ngIf="showLeaderBoard">LeaderBoard</button>
+        <button type="button" class="btn btn-info" (click)="previewYourTeam()" *ngIf="previewTeam">Team
             Preview</button>
-        <button type="button" class="btn btn-light" (click)="previewTeam()" disabled="true"
-            *ngIf="weekDay.status === 'COMING_UP'">
+        <button type="button" class="btn btn-light" (click)="previewYourTeam()" disabled="true" *ngIf="showComingUp">
             Coming up</button>
     </div>
 </mat-card>

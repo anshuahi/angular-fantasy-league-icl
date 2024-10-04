@@ -1,0 +1,54 @@
+.preview {
+    padding: 20px;
+}
+
+ul {
+    padding: 0 10px;
+    list-style: none;
+}
+
+.player-preview {
+    border-radius: 5px;
+    margin: 2px;
+    display: flex;
+    flex-direction: row;
+    padding: 5px 20px;
+}
+
+.even {
+    background: antiquewhite;
+    border: 1px solid rgb(72, 182, 122);
+}
+
+.odd {
+    background: aliceblue;
+    border: 1px solid #4677b1;
+}
+
+mat-icon {
+    margin-bottom: -5px;
+}
+
+.leaderboard {
+    width: 400px;
+    margin: auto;
+    height: calc(100vh - 200px)
+}
+
+.title {
+    text-align: center;
+    font-size: large;
+    padding-bottom: 20px;
+    color: #d73f3f;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.header {
+    margin: auto;
+}
+
+h6 {
+    margin: auto;
+}

@@ -1,1 +1,23 @@
-<p>leaderboard works!</p>
+<div class="leaderboard">
+
+    <div style="margin: 30px auto;">
+        <div class="title">
+            <header>Leaderboard for Week-{{weekId}}</header>
+        </div>
+        <mat-spinner *ngIf="!showLeaderboard" style="margin: 200px auto;"></mat-spinner>
+
+        <div *ngIf="showLeaderboard">
+            <ul>
+                <li *ngFor="let player of leaderboard; let i = index">
+                    <div class="player-preview" (click)="previewTeam(player)" [ngClass]="i%2 == 0? 'even' : 'odd'">
+                        <h6 style="flex-grow: 1; padding: 4px;">
+                            {{i+1}}. {{ player.leaderboardUser.fullName | titlecase}}<mat-icon
+                                *ngIf="i == 0">emoji_events</mat-icon>
+                        </h6>
+                        <div class="points">{{player.totalPoints.toFixed(2)}} </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

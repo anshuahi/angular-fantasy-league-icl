@@ -1,4 +1,5 @@
-<div>
+<mat-spinner *ngIf="!showTeams" style="margin: 200px auto;"></mat-spinner>
+<div *ngIf="showTeams">
     <div class="header">
         <button mat-raised-button (click)="openDialog()"> Save Team</button>
         <h1>Create your Team</h1>

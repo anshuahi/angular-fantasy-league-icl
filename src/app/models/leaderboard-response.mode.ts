@@ -5,6 +5,7 @@ export interface LeaderboardResponse {
 }
 
 export interface LeaderboardFantasyTeam {
+    weekId: string,
     weekStatus: MatchStatus,
     playerMatchPoints: PlayerMatchPoints[],
     leaderboardUser: LeaderboardUser,
@@ -31,8 +32,8 @@ export interface LeaderboardUser {
 }
 
 export enum MatchStatus {
-    COMPLETED,
-    COMING_UP,
-    IN_PROGRESS,
-    CANCELLED
+    COMPLETED = 'COMPLETED',
+    COMING_UP = 'COMING_UP',
+    IN_PROGRESS = 'IN_PROGRESS',
+    CANCELLED = 'CANCELLED',
 }

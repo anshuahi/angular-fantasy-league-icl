@@ -33,11 +33,11 @@ export class HeaderComponent implements OnInit {
   login = 'login';
 
   homePage() {
-    console.log("go to homepage")
+    // console.log("go to homepage")
     this.router.navigate(['/']);
   }
   logout() {
-    console.log("logout");
+    // console.log("logout");
     localStorage.removeItem("user");
     this.fantasyLeagueService.authenticatedSubject.next(false)
     this.router.navigate(['/login']);
