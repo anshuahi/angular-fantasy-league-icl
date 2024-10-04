@@ -162,6 +162,9 @@ export class FantasyLeagueService {
           localStorage.setItem('user', JSON.stringify(this.user));
           this.authenticatedSubject.next(true);
         }
+        else {
+          this.registerMessageSubject.next(response.message);
+        }
       }
     )
     return true;
