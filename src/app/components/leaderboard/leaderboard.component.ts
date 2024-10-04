@@ -8,6 +8,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatDialog } from '@angular/material/dialog';
 import { PreviewTeamDialogComponent } from '../../dialogs/preview-team/preview-team-dialog.component';
 import { MatIconModule } from '@angular/material/icon';
+import { User } from '../../models/user.model';
 
 @Component({
   selector: 'app-leaderboard',
@@ -30,6 +31,7 @@ export class LeaderboardComponent implements OnInit {
   leaderboard: LeaderboardFantasyTeam[] = [];
   showLeaderboard = false;
   weekId!: string;
+  user!: User;
 
 
   constructor(private router: Router,
@@ -39,13 +41,15 @@ export class LeaderboardComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.user = this.fantasyLeagueService.getUser();
     this.route.paramMap.subscribe(params => {
       this.weekId = params.get('id')!;
       this.fantasyLeagueService.getLeaderboardDetails(this.weekId).subscribe(
         (response: LeaderboardResponse) => {
           if (response.status == 200) {
             this.leaderboardSubject.next(response.data);
-            this.leaderboard = response.data.sort((a, b) => (Number(b.totalPoints) - Number(a.totalPoints)));
+            const list = response.data.sort((a, b) => (Number(b.totalPoints) - Number(a.totalPoints)));
+            this.leaderboard = list
             this.showLeaderboard = true;
             // console.log(this.leaderboard);
           }
