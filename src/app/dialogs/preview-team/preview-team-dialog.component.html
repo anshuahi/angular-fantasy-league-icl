@@ -9,10 +9,11 @@
         <ul>
             <li *ngFor="let player of data.playerMatchPoints">
                 <div class="player-preview">
-                    <h6 style="flex-grow: 1; padding: 4px;">
+                    <h6 style="flex-grow: 1; padding: 4px;"
+                        [ngClass]="player.playerId == data.captainId? 'captain' : player.playerId == data.viceCaptainId? 'vcaptain' : ''">
                         {{ player.playerName }} ({{player.playerTeam}})
-                        <span *ngIf="player.playerId == data.captainId" style="color: rgb(203, 16, 44);">(c)</span>
-                        <span *ngIf="player.playerId == data.viceCaptainId" style="color: rgb(80, 49, 203);">(vc)</span>
+                        <span *ngIf="player.playerId == data.captainId" class="captain">(c)</span>
+                        <span *ngIf="player.playerId == data.viceCaptainId" class="vcaptain">(vc)</span>
                     </h6>
                     <div *ngIf="data.weekStatus == 'COMPLETED'" class="points">{{player.totalPoints.toFixed(2)}} </div>
                 </div>
