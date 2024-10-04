@@ -83,6 +83,7 @@ export class SaveTeamDialogComponent implements OnInit {
       (response: any) => {
         // console.log(response);
         if (response.status === 200) {
+          this.fantasyLeagueService.getUserDetails();
           this.onClose();
           this.router.navigate(['/']);
         }

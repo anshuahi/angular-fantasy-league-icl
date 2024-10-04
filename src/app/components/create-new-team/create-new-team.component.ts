@@ -46,17 +46,17 @@ export class CreateNewTeamComponent implements OnInit {
 
   ngOnInit(): void {
     this.selectedPlayers = [];
-    this.playerDetails = this.fantasyLeagueService.getPlayers();
 
     this.route.paramMap.subscribe(params => {
+      this.playerDetails = this.fantasyLeagueService.getPlayers();
       this.weekId = params.get('id')!;
       this.teamId = this.fantasyLeagueService.getTeamId(this.weekId);
       this.fantasyLeagueService.getTeamByWeekId(this.weekId).subscribe(
         (team: LeaderboardFantasyTeam) => {
           this.showTeams = true;
-          if (team) {
-            console.log('team', team);
-            this.selectedPlayers = team.playerMatchPoints.map(player => player.playerId);
+          if (team.captainId) {
+            // console.log('team', team);
+            this.selectedPlayers = team.playerMatchPoints?.map(player => player.playerId);
 
             this.playerDetails.map(player => {
               if (this.selectedPlayers.includes(player.playerId.toString())) {
