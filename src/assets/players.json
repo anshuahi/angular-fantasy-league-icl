@@ -1,848 +1,857 @@
 [
     {
         "playerId": "1",
-        "teamId": "IJ",
-        "name": "Deepak Thakur",
-        "teamName": "Infinity Juggernauts",
-        "role": "Batsman",
-        "rating": "6",
-        "selected": false
+        "teamId": "PR",
+        "name": "Abhijeet Takmare",
+        "teamName": "Predators",
+        "role": "Wicket Keeper Batsman",
+        "rating": 8,
+        "cricheroesName": "Abhijeet Takmare"
     },
     {
         "playerId": "2",
-        "teamId": "IJ",
-        "name": "Basant Sarda",
-        "Team Name": "Infinity Juggernauts",
-        "role": "Batsman",
-        "rating": "7",
-        "selected": false
+        "teamId": "NB",
+        "name": "Anshu Ahirwar",
+        "teamName": "NewBies",
+        "role": "Wicket Keeper Batsman",
+        "rating": 9.5,
+        "cricheroesName": "Anshu Ahirwar"
     },
     {
         "playerId": "3",
-        "teamId": "DW",
-        "name": "Sandeep Singh",
-        "Team Name": "Dominating Warriors",
-        "role": "Batsman",
-        "rating": "8.5",
-        "selected": false
+        "teamId": "HU",
+        "name": "Ashutosh Mishra",
+        "teamName": "Hustlers",
+        "role": "Wicket Keeper Batsman",
+        "rating": 7.5,
+        "cricheroesName": "Ashutosh Mishra"
     },
     {
         "playerId": "4",
-        "teamId": "HU",
-        "name": "Rahul Sharma",
-        "Team Name": "Hustlers",
-        "role": "Batsman",
-        "rating": "8",
-        "selected": false
+        "teamId": "IJ",
+        "name": "Chandrakant Pandey",
+        "teamName": "Juggernauts",
+        "role": "Wicket Keeper Batsman",
+        "rating": 7,
+        "cricheroesName": "Chandrakant Pandey"
     },
     {
         "playerId": "5",
-        "teamId": "LE",
-        "name": "Vadan",
-        "Team Name": "Legends",
-        "role": "Batsman",
-        "rating": "7.5",
-        "selected": false
+        "teamId": "NB",
+        "name": "Ganesh Gujar",
+        "teamName": "NewBies",
+        "role": "Wicket Keeper Batsman",
+        "rating": 8,
+        "cricheroesName": "Ganesh Gujar"
     },
     {
         "playerId": "6",
-        "teamId": "PR",
-        "name": "Rahul Dubey",
-        "Team Name": "Predators",
-        "role": "Batsman",
-        "rating": "7.5",
-        "selected": false
+        "teamId": "LE",
+        "name": "Kaustubh Kature",
+        "teamName": "Legends",
+        "role": "Wicket Keeper Batsman",
+        "rating": 7.5,
+        "cricheroesName": "Kaustubh Kature"
     },
     {
         "playerId": "7",
         "teamId": "HU",
-        "name": "Bhaskar Arora",
-        "Team Name": "Hustlers",
-        "role": "Batsman",
-        "rating": "6",
-        "selected": false
+        "name": "Neeraj Sharma",
+        "teamName": "Hustlers",
+        "role": "Wicket Keeper Batsman",
+        "rating": 8.5,
+        "cricheroesName": "Neer Sharma"
     },
     {
         "playerId": "8",
-        "teamId": "IJ",
-        "name": "Ronak Chandwani",
-        "Team Name": "Infinity Juggernauts",
-        "role": "Batsman",
-        "rating": "5",
-        "selected": false
+        "teamId": "LE",
+        "name": "Nitin Lamba",
+        "teamName": "Legends",
+        "role": "Wicket Keeper Batsman",
+        "rating": 7,
+        "cricheroesName": "Nitin Lamba"
     },
     {
         "playerId": "9",
-        "teamId": "NB",
-        "name": "MKS",
-        "Team Name": "New Bies Rising Stars",
-        "role": "Batsman",
-        "rating": "7.5",
-        "selected": false
+        "teamId": "DW",
+        "name": "Rahul Humnabadkar",
+        "teamName": "Warriors",
+        "role": "Wicket Keeper Batsman",
+        "rating": 6,
+        "cricheroesName": "Rahul Humnabadkar"
     },
     {
         "playerId": "10",
-        "teamId": "DW",
-        "name": "Lalit Chandvani",
-        "Team Name": "Dominating Warriors",
-        "role": "Batsman",
-        "rating": "5",
-        "selected": false
+        "teamId": "IJ",
+        "name": "Rahul Masatker",
+        "teamName": "Juggernauts",
+        "role": "Wicket Keeper Batsman",
+        "rating": 9,
+        "cricheroesName": "Rahul Masatker"
     },
     {
         "playerId": "11",
-        "teamId": "HU",
-        "name": "Jiten Israni",
-        "Team Name": "Hustlers",
-        "role": "Batsman",
-        "rating": "5",
-        "selected": false
+        "teamId": "LE",
+        "name": "Rupesh Routh",
+        "teamName": "Legends",
+        "role": "Wicket Keeper Batsman",
+        "rating": 9,
+        "cricheroesName": "Rupesh Routh"
     },
     {
         "playerId": "12",
-        "teamId": "HU",
-        "name": "Nikhil Sinha",
-        "Team Name": "Hustlers",
-        "role": "Batsman",
-        "rating": "5",
-        "selected": false
+        "teamId": "DW",
+        "name": "Shravan singh",
+        "teamName": "Warriors",
+        "role": "Wicket Keeper Batsman",
+        "rating": 7,
+        "cricheroesName": "Shravan Singh"
     },
     {
         "playerId": "13",
         "teamId": "LE",
-        "name": "Niraj Lathar",
-        "Team Name": "Legends",
-        "role": "Batsman",
-        "rating": "7",
-        "selected": false
+        "name": "Sohail Sheikh",
+        "teamName": "Legends",
+        "role": "Wicket Keeper Batsman",
+        "rating": 6,
+        "cricheroesName": "Sohail"
     },
     {
         "playerId": "14",
-        "teamId": "PR",
-        "name": "Ammol Zawar",
-        "Team Name": "Predators",
-        "role": "Batsman",
-        "rating": "6",
-        "selected": false
+        "teamId": "DW",
+        "name": "Vivek Kumar",
+        "teamName": "Warriors",
+        "role": "Wicket Keeper Batsman",
+        "rating": 9,
+        "cricheroesName": "Vivek Kumar"
     },
     {
         "playerId": "15",
-        "teamId": "IJ",
-        "name": "Zaki Mubarki",
-        "Team Name": "Infinity Juggernauts",
+        "teamId": "PR",
+        "name": "Ammol Zawar",
+        "teamName": "Predators",
         "role": "Batsman",
-        "rating": "6.5",
-        "selected": false
+        "rating": 6,
+        "cricheroesName": "A Z"
     },
     {
         "playerId": "16",
-        "teamId": "DW",
-        "name": "Shiva",
-        "Team Name": "Dominating Warriors",
+        "teamId": "IJ",
+        "name": "Basant Sarda",
+        "teamName": "Juggernauts",
         "role": "Batsman",
-        "rating": "6.5",
-        "selected": false
+        "rating": 7,
+        "cricheroesName": "Basant Sarda"
     },
     {
         "playerId": "17",
-        "teamId": "DW",
-        "name": "Pranav Tripathi ",
-        "Team Name": "Dominating Warriors",
+        "teamId": "HU",
+        "name": "Bhaskar Arora",
+        "teamName": "Hustlers",
         "role": "Batsman",
-        "rating": "7",
-        "selected": false
+        "rating": 6,
+        "cricheroesName": "Bhaskar Arora"
     },
     {
         "playerId": "18",
-        "teamId": "LE",
-        "name": "Rakesh",
-        "Team Name": "Legends",
+        "teamId": "IJ",
+        "name": "Deepak Thakur",
+        "teamName": "Juggernauts",
         "role": "Batsman",
-        "rating": "6",
-        "selected": false
+        "rating": 6,
+        "cricheroesName": "Deepak Thakur"
     },
     {
         "playerId": "19",
-        "teamId": "NB",
-        "name": "Sahil Bhatt ",
-        "Team Name": "New Bies Rising Stars",
-        "role": "Bowler",
-        "rating": "8.5",
-        "selected": false
+        "teamId": "HU",
+        "name": "Jiten Israni",
+        "teamName": "Hustlers",
+        "role": "Batsman",
+        "rating": 5,
+        "cricheroesName": "Jiten Israni"
     },
     {
         "playerId": "20",
-        "teamId": "PR",
-        "name": "Asrar Pathan",
-        "Team Name": "Predators",
-        "role": "Bowler",
-        "rating": "7.5",
-        "selected": false
+        "teamId": "DW",
+        "name": "Lalit Chandvani",
+        "teamName": "Warriors",
+        "role": "Batsman",
+        "rating": 5,
+        "cricheroesName": "Lalit Chandvani"
     },
     {
         "playerId": "21",
-        "teamId": "DW",
-        "name": "Tejas Muley ",
-        "Team Name": "Dominating Warriors",
-        "role": "Bowler",
-        "rating": "10",
-        "selected": false
+        "teamId": "NB",
+        "name": "MKS",
+        "teamName": "NewBies",
+        "role": "Batsman",
+        "rating": 7.5,
+        "cricheroesName": "Manish Kumar Singh"
     },
     {
         "playerId": "22",
-        "teamId": "DW",
-        "name": "Sujay Patel ",
-        "Team Name": "Dominating Warriors",
-        "role": "Bowler",
-        "rating": "6",
-        "selected": false
+        "teamId": "HU",
+        "name": "Nikhil Sinha",
+        "teamName": "Hustlers",
+        "role": "Batsman",
+        "rating": 5,
+        "cricheroesName": "Nikhil Sinha"
     },
     {
         "playerId": "23",
-        "teamId": "DW",
-        "name": "Amit Bade",
-        "Team Name": "Dominating Warriors",
-        "role": "Bowler",
-        "rating": "7",
-        "selected": false
+        "teamId": "LE",
+        "name": "Niraj Lathar",
+        "teamName": "Legends",
+        "role": "Batsman",
+        "rating": 7,
+        "cricheroesName": "Niraj Kumar Lathar"
     },
     {
         "playerId": "24",
-        "teamId": "NB",
-        "name": "Nitin Sharma",
-        "Team Name": "New Bies Rising Stars",
-        "role": "Bowler",
-        "rating": "6.5",
-        "selected": false
+        "teamId": "DW",
+        "name": "Pranav Tripathi",
+        "teamName": "Warriors",
+        "role": "Batsman",
+        "rating": 7,
+        "cricheroesName": "Pranav Tripathi"
     },
     {
         "playerId": "25",
         "teamId": "PR",
-        "name": "Gaurav c",
-        "Team Name": "Predators",
-        "role": "Bowler",
-        "rating": "7.5",
-        "selected": false
+        "name": "Rahul Dubey",
+        "teamName": "Predators",
+        "role": "Batsman",
+        "rating": 7.5,
+        "cricheroesName": "Rahul Dubey"
     },
     {
         "playerId": "26",
-        "teamId": "NB",
-        "name": "VITRAG SHELADIA ",
-        "Team Name": "New Bies Rising Stars",
-        "role": "Bowler",
-        "rating": "10",
-        "selected": false
+        "teamId": "HU",
+        "name": "Rahul Sharma",
+        "teamName": "Hustlers",
+        "role": "Batsman",
+        "rating": 8,
+        "cricheroesName": "Rahul Sharma"
     },
     {
         "playerId": "27",
-        "teamId": "NB",
-        "name": "Asaad Khan",
-        "Team Name": "New Bies Rising Stars",
-        "role": "Bowler",
-        "rating": "8",
-        "selected": false
+        "teamId": "LE",
+        "name": "Rakesh GR",
+        "teamName": "Legends",
+        "role": "Batsman",
+        "rating": 6,
+        "cricheroesName": "Rakesh Gr"
     },
     {
         "playerId": "28",
-        "teamId": "NB",
-        "name": "Yasir Siddiqui",
-        "Team Name": "New Bies Rising Stars",
-        "role": "Bowler",
-        "rating": "7.5",
-        "selected": false
+        "teamId": "IJ",
+        "name": "Ronak Chandwani",
+        "teamName": "Juggernauts",
+        "role": "Batsman",
+        "rating": 5,
+        "cricheroesName": "Ronak Chandwani"
     },
     {
         "playerId": "29",
-        "teamId": "HU",
-        "name": "MAHESH SHEWALE",
-        "Team Name": "Hustlers",
-        "role": "Bowler",
-        "rating": "6",
-        "selected": false
+        "teamId": "DW",
+        "name": "Sandeep Singh",
+        "teamName": "Warriors",
+        "role": "Batsman",
+        "rating": 8.5,
+        "cricheroesName": "Sandeep Singh"
     },
     {
         "playerId": "30",
         "teamId": "DW",
-        "name": "Kiran Thite",
-        "Team Name": "Dominating Warriors",
-        "role": "Bowler",
-        "rating": "7",
-        "selected": false
+        "name": "Shiva",
+        "teamName": "Warriors",
+        "role": "Batsman",
+        "rating": 6.5,
+        "cricheroesName": "SIVA KRISHNA"
     },
     {
         "playerId": "31",
-        "teamId": "NB",
-        "name": "Uday Velinkar",
-        "Team Name": "New Bies Rising Stars",
-        "role": "Bowler",
-        "rating": "7.5",
-        "selected": false
+        "teamId": "LE",
+        "name": "Vadan",
+        "teamName": "Legends",
+        "role": "Batsman",
+        "rating": 7.5,
+        "cricheroesName": "Haya"
     },
     {
         "playerId": "32",
-        "teamId": "NB",
-        "name": "Sunny Keshri ",
-        "Team Name": "New Bies Rising Stars",
-        "role": "Bowler",
-        "rating": "8",
-        "selected": false
+        "teamId": "IJ",
+        "name": "Zaki Mubarki",
+        "teamName": "Juggernauts",
+        "role": "Batsman",
+        "rating": 6.5,
+        "cricheroesName": "Zaki Mubarki"
     },
     {
         "playerId": "33",
-        "teamId": "DW",
-        "name": "AB",
-        "Team Name": "Dominating Warriors",
-        "role": "Bowler",
-        "rating": "6.5",
-        "selected": false
+        "teamId": "NB",
+        "name": "Adi Vaibhav",
+        "teamName": "NewBies",
+        "role": "All Rounder",
+        "rating": 6.5,
+        "cricheroesName": "Adi Vaibhav"
     },
     {
         "playerId": "34",
-        "teamId": "HU",
-        "name": "Aditya Nigam",
-        "Team Name": "Hustlers",
-        "role": "Bowler",
-        "rating": "9",
-        "selected": false
+        "teamId": "IJ",
+        "name": "Akshay Tomar",
+        "teamName": "Juggernauts",
+        "role": "All Rounder",
+        "rating": 8,
+        "cricheroesName": "Akshay Tomar"
     },
     {
         "playerId": "35",
-        "teamId": "IJ",
-        "name": "Rahul Masatkar",
-        "Team Name": "Infinity Juggernauts",
-        "role": "Wicket Keeper Batsman",
-        "rating": "9",
-        "selected": false
+        "teamId": "NB",
+        "name": "Anil Prasad",
+        "teamName": "NewBies",
+        "role": "All Rounder",
+        "rating": 6,
+        "cricheroesName": ""
     },
     {
         "playerId": "36",
-        "teamId": "DW",
-        "name": "Rahul Humnabadkar ",
-        "Team Name": "Dominating Warriors",
-        "role": "Wicket Keeper Batsman",
-        "rating": "6",
-        "selected": false
+        "teamId": "LE",
+        "name": "Ankush Madan",
+        "teamName": "Legends",
+        "role": "All Rounder",
+        "rating": 9.5,
+        "cricheroesName": "Ankush"
     },
     {
         "playerId": "37",
-        "teamId": "LE",
-        "name": "Kaustubh Kature",
-        "Team Name": "Legends",
-        "role": "Wicket Keeper Batsman",
-        "rating": "7.5",
-        "selected": false
+        "teamId": "PR",
+        "name": "Anshul Bhatteja",
+        "teamName": "Predators",
+        "role": "All Rounder",
+        "rating": 9,
+        "cricheroesName": "Anshul B"
     },
     {
         "playerId": "38",
-        "teamId": "NB",
-        "name": "Anshu Ahirwar ",
-        "Team Name": "New Bies Rising Stars",
-        "role": "Wicket Keeper Batsman",
-        "rating": "10",
-        "selected": false
+        "teamId": "DW",
+        "name": "Apurva Singh",
+        "teamName": "Warriors",
+        "role": "All Rounder",
+        "rating": 9.5,
+        "cricheroesName": "Apurva Singh"
     },
     {
         "playerId": "39",
-        "teamId": "PR",
-        "name": "Abhijeet Takmare",
-        "Team Name": "Predators",
-        "role": "Wicket Keeper Batsman",
-        "rating": "8",
-        "selected": false
+        "teamId": "LE",
+        "name": "Ashish Patidar",
+        "teamName": "Legends",
+        "role": "All Rounder",
+        "rating": 9.5,
+        "cricheroesName": "Ashish Patidar"
     },
     {
         "playerId": "40",
-        "teamId": "DW",
-        "name": "Shravan singh",
-        "Team Name": "Dominating Warriors",
-        "role": "Wicket Keeper Batsman",
-        "rating": "7",
-        "selected": false
+        "teamId": "IJ",
+        "name": "Ashish Verma",
+        "teamName": "Juggernauts",
+        "role": "All Rounder",
+        "rating": 9.5,
+        "cricheroesName": "Ashish Verma"
     },
     {
         "playerId": "41",
-        "teamId": "LE",
-        "name": "Nitin Lamba",
-        "Team Name": "Legends",
-        "role": "Wicket Keeper Batsman",
-        "rating": "7",
-        "selected": false
+        "teamId": "HU",
+        "name": "Atul Sharma",
+        "teamName": "Hustlers",
+        "role": "All Rounder",
+        "rating": 9.5,
+        "cricheroesName": "Atul Sharma"
     },
     {
         "playerId": "42",
-        "teamId": "IJ",
-        "name": "Chandrakant Pandey",
-        "Team Name": "Infinity Juggernauts",
-        "role": "Wicket Keeper Batsman",
-        "rating": "7",
-        "selected": false
+        "teamId": "HU",
+        "name": "Avdhut",
+        "teamName": "Hustlers",
+        "role": "All Rounder",
+        "rating": 9,
+        "cricheroesName": "Avdhut"
     },
     {
         "playerId": "43",
-        "teamId": "HU",
-        "name": "Ashutosh Mishra ",
-        "Team Name": "Hustlers",
-        "role": "Wicket Keeper Batsman",
-        "rating": "7.5",
-        "selected": false
+        "teamId": "DW",
+        "name": "Bharat Singh",
+        "teamName": "Warriors",
+        "role": "All Rounder",
+        "rating": 7.5,
+        "cricheroesName": "Bharat Singh Kushwah"
     },
     {
         "playerId": "44",
-        "teamId": "LE",
-        "name": "Sohail Sheikh ",
-        "Team Name": "Legends",
-        "role": "Wicket Keeper Batsman",
-        "rating": "6",
-        "selected": false
+        "teamId": "HU",
+        "name": "Dhaval Vyas",
+        "teamName": "Hustlers",
+        "role": "All Rounder",
+        "rating": 6,
+        "cricheroesName": "Dhaval Vyas"
     },
     {
         "playerId": "45",
-        "teamId": "HU",
-        "name": "Neeraj Sharma",
-        "Team Name": "Hustlers",
-        "role": "Wicket Keeper Batsman",
-        "rating": "8.5",
-        "selected": false
+        "teamId": "PR",
+        "name": "Divyanshu Pathak",
+        "teamName": "Predators",
+        "role": "All Rounder",
+        "rating": 8,
+        "cricheroesName": "Divyanshu Pathak"
     },
     {
         "playerId": "46",
         "teamId": "DW",
-        "name": "Vivek Kumar ",
-        "Team Name": "Dominating Warriors",
-        "role": "Wicket Keeper Batsman",
-        "rating": "9",
-        "selected": false
+        "name": "Gaurav Anand",
+        "teamName": "Warriors",
+        "role": "All Rounder",
+        "rating": 9,
+        "cricheroesName": "Gaurav Anand"
     },
     {
         "playerId": "47",
-        "teamId": "LE",
-        "name": "Rupesh Routh",
-        "Team Name": "Legends",
-        "role": "Wicket Keeper Batsman",
-        "rating": "9",
-        "selected": false
+        "teamId": "PR",
+        "name": "Gaurav Nathani",
+        "teamName": "Predators",
+        "role": "All Rounder",
+        "rating": 9.5,
+        "cricheroesName": "Gaurav Nathani"
     },
     {
         "playerId": "48",
-        "teamId": "NB",
-        "name": "Ganesh Gujar",
-        "Team Name": "New Bies Rising Stars",
-        "role": "Wicket Keeper Batsman",
-        "rating": "8",
-        "selected": false
+        "teamId": "IJ",
+        "name": "Gopal Agrawal",
+        "teamName": "Juggernauts",
+        "role": "All Rounder",
+        "rating": 7,
+        "cricheroesName": "Gopal Agrawal"
     },
     {
         "playerId": "49",
-        "teamId": "DW",
-        "name": "Bharat Singh",
-        "Team Name": "Dominating Warriors",
+        "teamId": "PR",
+        "name": "Manish singh",
+        "teamName": "Predators",
         "role": "All Rounder",
-        "rating": "7.5",
-        "selected": false
+        "rating": 7.5,
+        "cricheroesName": "Manish Singh"
     },
     {
         "playerId": "50",
-        "teamId": "HU",
-        "name": "Shailesh Yadav ",
-        "Team Name": "Hustlers",
+        "teamId": "LE",
+        "name": "Mayur Jagtap",
+        "teamName": "Legends",
         "role": "All Rounder",
-        "rating": "9.5",
-        "selected": false
+        "rating": 9.5,
+        "cricheroesName": "Mayur Jagtap"
     },
     {
         "playerId": "51",
         "teamId": "IJ",
-        "name": "Nikhil Chandak ",
-        "Team Name": "Infinity Juggernauts",
+        "name": "Mehul Parikh",
+        "teamName": "Juggernauts",
         "role": "All Rounder",
-        "rating": "8.5",
-        "selected": false
+        "rating": 5,
+        "cricheroesName": "Mehul Parikh"
     },
     {
         "playerId": "52",
         "teamId": "HU",
-        "name": "Atul Sharma",
-        "Team Name": "Hustlers",
+        "name": "Mohit Mathur",
+        "teamName": "Hustlers",
         "role": "All Rounder",
-        "rating": "10",
-        "selected": false
+        "rating": 9.5,
+        "cricheroesName": "Mohit Mathur"
     },
     {
         "playerId": "53",
-        "teamId": "DW",
-        "name": "Apurva Singh",
-        "Team Name": "Dominating Warriors",
+        "teamId": "IJ",
+        "name": "Nikhil Chandak",
+        "teamName": "Juggernauts",
         "role": "All Rounder",
-        "rating": "10",
-        "selected": false
+        "rating": 8.5,
+        "cricheroesName": "Nikhil Chandak"
     },
     {
         "playerId": "54",
-        "teamId": "PR",
-        "name": "Vivek Singh",
-        "Team Name": "Predators",
+        "teamId": "HU",
+        "name": "Nikhil Kanwar",
+        "teamName": "Hustlers",
         "role": "All Rounder",
-        "rating": "8",
-        "selected": false
+        "rating": 7,
+        "cricheroesName": "Nikhil Kanwar"
     },
     {
         "playerId": "55",
-        "teamId": "LE",
-        "name": "Ashish Patidar ",
-        "Team Name": "Legends",
+        "teamId": "IJ",
+        "name": "Nilesh Wagh",
+        "teamName": "Juggernauts",
         "role": "All Rounder",
-        "rating": "10",
-        "selected": false
+        "rating": 8.5,
+        "cricheroesName": "Nilesh"
     },
     {
         "playerId": "56",
-        "teamId": "HU",
-        "name": "Vinayak Kadam",
-        "Team Name": "Hustlers",
+        "teamId": "LE",
+        "name": "Pankaj Mundhra",
+        "teamName": "Legends",
         "role": "All Rounder",
-        "rating": "7.5",
-        "selected": false
+        "rating": 6,
+        "cricheroesName": "Pankaj Mundhra"
     },
     {
         "playerId": "57",
-        "teamId": "DW",
-        "name": "Rohit Rathi",
-        "Team Name": "Dominating Warriors",
+        "teamId": "HU",
+        "name": "Pankaj Saxena",
+        "teamName": "Hustlers",
         "role": "All Rounder",
-        "rating": "8",
-        "selected": false
+        "rating": 9,
+        "cricheroesName": "Pankaj Saxena"
     },
     {
         "playerId": "58",
-        "teamId": "PR",
-        "name": "Manish singh",
-        "Team Name": "Predators",
+        "teamId": "NB",
+        "name": "Pavan Vijjapu",
+        "teamName": "NewBies",
         "role": "All Rounder",
-        "rating": "7.5",
-        "selected": false
+        "rating": 8,
+        "cricheroesName": "Pavan"
     },
     {
         "playerId": "59",
-        "teamId": "NB",
-        "name": "Pavan Vijjapu",
-        "Team Name": "New Bies Rising Stars",
+        "teamId": "LE",
+        "name": "Prashant Thanvi",
+        "teamName": "Legends",
         "role": "All Rounder",
-        "rating": "8",
-        "selected": false
+        "rating": 8,
+        "cricheroesName": "Prashant"
     },
     {
         "playerId": "60",
-        "teamId": "IJ",
-        "name": "Akshay Tomar",
-        "Team Name": "Infinity Juggernauts",
+        "teamId": "PR",
+        "name": "Prateek Nepaliya",
+        "teamName": "Predators",
         "role": "All Rounder",
-        "rating": "8",
-        "selected": false
+        "rating": 6,
+        "cricheroesName": "Prateek Nepaliya"
     },
     {
         "playerId": "61",
         "teamId": "LE",
-        "name": "Vinod Beloshe ",
-        "Team Name": "Legends",
+        "name": "Rajiv Coomar",
+        "teamName": "Legends",
         "role": "All Rounder",
-        "rating": "7",
-        "selected": false
+        "rating": 8,
+        "cricheroesName": "Rajiv Coomar Git 6b"
     },
     {
         "playerId": "62",
-        "teamId": "LE",
-        "name": "Rajiv Coomar ",
-        "Team Name": "Legends",
+        "teamId": "NB",
+        "name": "Ranvijay",
+        "teamName": "NewBies",
         "role": "All Rounder",
-        "rating": "8",
-        "selected": false
+        "rating": 8,
+        "cricheroesName": "Ranvijay Singh Charak"
     },
     {
         "playerId": "63",
-        "teamId": "HU",
-        "name": "Mohit Mathur",
-        "Team Name": "Hustlers",
+        "teamId": "NB",
+        "name": "Ritesh Notani",
+        "teamName": "NewBies",
         "role": "All Rounder",
-        "rating": "10",
-        "selected": false
+        "rating": 8.5,
+        "cricheroesName": "Ritesh Notani"
     },
     {
         "playerId": "64",
-        "teamId": "IJ",
-        "name": "Mehul Parikh ",
-        "Team Name": "Infinity Juggernauts",
+        "teamId": "DW",
+        "name": "Rohit Rathi",
+        "teamName": "Warriors",
         "role": "All Rounder",
-        "rating": "5",
-        "selected": false
+        "rating": 8,
+        "cricheroesName": "Rohit Rathi"
     },
     {
         "playerId": "65",
         "teamId": "LE",
-        "name": "Ankush Madan",
-        "Team Name": "Legends",
+        "name": "Sahil Vaishnav",
+        "teamName": "Legends",
         "role": "All Rounder",
-        "rating": "10",
-        "selected": false
+        "rating": 6,
+        "cricheroesName": "Sahil Vaishnav"
     },
     {
         "playerId": "66",
-        "teamId": "IJ",
-        "name": "Tushar Sachdeva",
-        "Team Name": "Infinity Juggernauts",
+        "teamId": "PR",
+        "name": "Sanjay Yadav",
+        "teamName": "Predators",
         "role": "All Rounder",
-        "rating": "9",
-        "selected": false
+        "rating": 8.5,
+        "cricheroesName": "Sanjay Yadav"
     },
     {
         "playerId": "67",
-        "teamId": "PR",
-        "name": "Anshul Bhatteja",
-        "Team Name": "Predators",
+        "teamId": "LE",
+        "name": "Santosh Lad",
+        "teamName": "Legends",
         "role": "All Rounder",
-        "rating": "9",
-        "selected": false
+        "rating": 8,
+        "cricheroesName": "Santosh Lad"
     },
     {
         "playerId": "68",
-        "teamId": "HU",
-        "name": "Avdhut ",
-        "Team Name": "Hustlers",
+        "teamId": "IJ",
+        "name": "Sarvesh Khatri",
+        "teamName": "Juggernauts",
         "role": "All Rounder",
-        "rating": "9",
-        "selected": false
+        "rating": 9.5,
+        "cricheroesName": "Sarvesh Khatri"
     },
     {
         "playerId": "69",
         "teamId": "PR",
-        "name": "Gaurav Nathani",
-        "Team Name": "Predators",
+        "name": "Saurabh Manjramkar",
+        "teamName": "Predators",
         "role": "All Rounder",
-        "rating": "10",
-        "selected": false
+        "rating": 9.5,
+        "cricheroesName": "Saurabh Manjramkar"
     },
     {
         "playerId": "70",
-        "teamId": "NB",
-        "name": "Ritesh Notani",
-        "Team Name": "New Bies Rising Stars",
+        "teamId": "HU",
+        "name": "Shailesh Yadav",
+        "teamName": "Hustlers",
         "role": "All Rounder",
-        "rating": "8.5",
-        "selected": false
+        "rating": 9.5,
+        "cricheroesName": "Shailesh Yadav"
     },
     {
         "playerId": "71",
-        "teamId": "IJ",
-        "name": "Ashish verma ",
-        "Team Name": "Infinity Juggernauts",
+        "teamId": "LE",
+        "name": "Shane srivastava",
+        "teamName": "Legends",
         "role": "All Rounder",
-        "rating": "10",
-        "selected": false
+        "rating": 9,
+        "cricheroesName": "Shane"
     },
     {
         "playerId": "72",
         "teamId": "IJ",
-        "name": "sarvesh khatri",
-        "Team Name": "Infinity Juggernauts",
+        "name": "Sumit Bhardwaj",
+        "teamName": "Juggernauts",
         "role": "All Rounder",
-        "rating": "9.5",
-        "selected": false
+        "rating": 8.5,
+        "cricheroesName": "Sumit Bhardwaj"
     },
     {
         "playerId": "73",
-        "teamId": "IJ",
-        "name": "Sumit Bhardwaj",
-        "Team Name": "Infinity Juggernauts",
+        "teamId": "NB",
+        "name": "Swapnil Chaudhari",
+        "teamName": "NewBies",
         "role": "All Rounder",
-        "rating": "8.5",
-        "selected": false
+        "rating": 8,
+        "cricheroesName": "Swapnil Chaudhari"
     },
     {
         "playerId": "74",
-        "teamId": "HU",
-        "name": "Pankaj Saxena ",
-        "Team Name": "Hustlers",
+        "teamId": "IJ",
+        "name": "Tushar Sachdeva",
+        "teamName": "Juggernauts",
         "role": "All Rounder",
-        "rating": "9",
-        "selected": false
+        "rating": 9,
+        "cricheroesName": "Tushar"
     },
     {
         "playerId": "75",
         "teamId": "PR",
-        "name": "Prateek Nepaliya ",
-        "Team Name": "Predators",
+        "name": "Vinayak Kadam",
+        "teamName": "Predators",
         "role": "All Rounder",
-        "rating": "6",
-        "selected": false
+        "rating": 7.5,
+        "cricheroesName": "Vinayak Kadam"
     },
     {
         "playerId": "76",
         "teamId": "LE",
-        "name": "Shane srivastava ",
-        "Team Name": "Legends",
+        "name": "Vinod Beloshe",
+        "teamName": "Legends",
         "role": "All Rounder",
-        "rating": "9",
-        "selected": false
+        "rating": 7,
+        "cricheroesName": "Vinod Beloshe"
     },
     {
         "playerId": "77",
-        "teamId": "HU",
-        "name": "Dhaval Vyas",
-        "Team Name": "Hustlers",
+        "teamId": "PR",
+        "name": "Vipendra Singh",
+        "teamName": "Predators",
         "role": "All Rounder",
-        "rating": "6",
-        "selected": false
+        "rating": 6.5,
+        "cricheroesName": "Vipendra Singh"
     },
     {
         "playerId": "78",
-        "teamId": "LE",
-        "name": "Santosh Lad ",
-        "Team Name": "Legends",
+        "teamId": "PR",
+        "name": "Vivek Singh",
+        "teamName": "Predators",
         "role": "All Rounder",
-        "rating": "8",
-        "selected": false
+        "rating": 8,
+        "cricheroesName": "Vivek Singh"
     },
     {
         "playerId": "79",
-        "teamId": "IJ",
-        "name": "Nilesh Wagh",
-        "Team Name": "Infinity Juggernauts",
-        "role": "All Rounder",
-        "rating": "8.5",
-        "selected": false
+        "teamId": "DW",
+        "name": "AB",
+        "teamName": "Warriors",
+        "role": "Bowler",
+        "rating": 6.5,
+        "cricheroesName": "Ab"
     },
     {
         "playerId": "80",
-        "teamId": "NB",
-        "name": "Adi Vaibhav",
-        "Team Name": "New Bies Rising Stars",
-        "role": "All Rounder",
-        "rating": "6.5",
-        "selected": false
+        "teamId": "HU",
+        "name": "Aditya Nigam",
+        "teamName": "Hustlers",
+        "role": "Bowler",
+        "rating": 9,
+        "cricheroesName": "Aditya Nigam"
     },
     {
         "playerId": "81",
-        "teamId": "PR",
-        "name": "Vipendra Singh",
-        "Team Name": "Predators",
-        "role": "All Rounder",
-        "rating": "6.5",
-        "selected": false
+        "teamId": "DW",
+        "name": "Amit Bade",
+        "teamName": "Warriors",
+        "role": "Bowler",
+        "rating": 7,
+        "cricheroesName": "Amit Bade"
     },
     {
         "playerId": "82",
-        "teamId": "PR",
-        "name": "Saurabh Manjramkar",
-        "Team Name": "Predators",
-        "role": "All Rounder",
-        "rating": "10",
-        "selected": false
+        "teamId": "NB",
+        "name": "Asaad Khan",
+        "teamName": "NewBies",
+        "role": "Bowler",
+        "rating": 8,
+        "cricheroesName": "Asaad Khan"
     },
     {
         "playerId": "83",
-        "teamId": "IJ",
-        "name": "Gopal agrawal ",
-        "Team Name": "Infinity Juggernauts",
-        "role": "All Rounder",
-        "rating": "7",
-        "selected": false
+        "teamId": "PR",
+        "name": "Asrar Pathan",
+        "teamName": "Predators",
+        "role": "Bowler",
+        "rating": 7.5,
+        "cricheroesName": "Asrar Pathan"
     },
     {
         "playerId": "84",
-        "teamId": "HU",
-        "name": "Nikhil Kanwar",
-        "Team Name": "Hustlers",
-        "role": "All Rounder",
-        "rating": "7",
-        "selected": false
+        "teamId": "PR",
+        "name": "Gaurav Chawda",
+        "teamName": "Predators",
+        "role": "Bowler",
+        "rating": 7.5,
+        "cricheroesName": "Gaurav C"
     },
     {
         "playerId": "85",
-        "teamId": "LE",
-        "name": "Sahil Bairagi",
-        "Team Name": "Legends",
-        "role": "All Rounder",
-        "rating": "6",
-        "selected": false
+        "teamId": "DW",
+        "name": "Kiran Thite",
+        "teamName": "Warriors",
+        "role": "Bowler",
+        "rating": 7,
+        "cricheroesName": "Kiran Thite"
     },
     {
         "playerId": "86",
-        "teamId": "PR",
-        "name": "Divyanshu Pathak",
-        "Team Name": "Predators",
-        "role": "All Rounder",
-        "rating": "8",
-        "selected": false
+        "teamId": "HU",
+        "name": "Mahesh Shewale",
+        "teamName": "Hustlers",
+        "role": "Bowler",
+        "rating": 6,
+        "cricheroesName": "Mahesh Shewale"
     },
     {
         "playerId": "87",
         "teamId": "NB",
-        "name": "Anil Prasad",
-        "Team Name": "New Bies Rising Stars",
-        "role": "All Rounder",
-        "rating": "6",
-        "selected": false
+        "name": "Nitin Sharma",
+        "teamName": "NewBies",
+        "role": "Bowler",
+        "rating": 6.5,
+        "cricheroesName": "Nitin Sharma"
     },
     {
         "playerId": "88",
-        "teamId": "LE",
-        "name": "Prashant Thanvi",
-        "Team Name": "Legends",
-        "role": "All Rounder",
-        "rating": "8",
-        "selected": false
+        "teamId": "NB",
+        "name": "Sahil Bhatt",
+        "teamName": "NewBies",
+        "role": "Bowler",
+        "rating": 8.5,
+        "cricheroesName": "Sahil B"
     },
     {
         "playerId": "89",
         "teamId": "DW",
-        "name": "Gaurav Anand",
-        "Team Name": "Dominating Warriors",
-        "role": "All Rounder",
-        "rating": "9",
-        "selected": false
+        "name": "Sujay Patel",
+        "teamName": "Warriors",
+        "role": "Bowler",
+        "rating": 6,
+        "cricheroesName": "Sujay Patel"
     },
     {
         "playerId": "90",
-        "teamId": "LE",
-        "name": "Mayur Jagtap",
-        "Team Name": "Legends",
-        "role": "All Rounder",
-        "rating": "10",
-        "selected": false
+        "teamId": "NB",
+        "name": "Sunny Keshari",
+        "teamName": "NewBies",
+        "role": "Bowler",
+        "rating": 8,
+        "cricheroesName": "Sunny Keshari"
     },
     {
         "playerId": "91",
-        "teamId": "LE",
-        "name": "Pankaj M",
-        "Team Name": "Legends",
-        "role": "All Rounder",
-        "rating": "6",
-        "selected": false
+        "teamId": "DW",
+        "name": "Tejas Muley",
+        "teamName": "Warriors",
+        "role": "Bowler",
+        "rating": 9.5,
+        "cricheroesName": "Tejas Muley"
     },
     {
         "playerId": "92",
         "teamId": "NB",
-        "name": "Swapnil C",
-        "Team Name": "New Bies Rising Stars",
-        "role": "All Rounder",
-        "rating": "8",
-        "selected": false
+        "name": "Uday Velinkar",
+        "teamName": "NewBies",
+        "role": "Bowler",
+        "rating": 7.5,
+        "cricheroesName": "Udayraj Velinkar"
     },
     {
         "playerId": "93",
         "teamId": "NB",
-        "name": "Ranvijay",
-        "Team Name": "New Bies Rising Stars",
-        "role": "All Rounder",
-        "rating": "8",
-        "selected": false
+        "name": "Vitrag Sheladia",
+        "teamName": "NewBies",
+        "role": "Bowler",
+        "rating": 9.5,
+        "cricheroesName": "Vitrag Sheladia"
     },
     {
         "playerId": "94",
+        "teamId": "NB",
+        "name": "Yasir Siddiqui",
+        "teamName": "NewBies",
+        "role": "Bowler",
+        "rating": 7.5,
+        "cricheroesName": "Yasir Siddiqui"
+    },
+    {
+        "playerId": "95",
         "teamId": "PR",
-        "name": "Sanjay ",
-        "Team Name": "Predators",
+        "name": "Vijay Kumar",
+        "teamName": "Predators",
         "role": "All Rounder",
-        "rating": "8.5",
-        "selected": false
+        "rating": 8.5,
+        "cricheroesName": "Vijay Kumar"
     }
 ]

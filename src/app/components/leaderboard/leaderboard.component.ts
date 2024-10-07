@@ -20,7 +20,7 @@ import { User } from '../../models/user.model';
 export class LeaderboardComponent implements OnInit {
   previewTeam(team: LeaderboardFantasyTeam) {
     const dialogRef = this.dialog.open(PreviewTeamDialogComponent, {
-      width: '250px',
+      width: '350px',
       data: team // Optional data passing
     });
   }

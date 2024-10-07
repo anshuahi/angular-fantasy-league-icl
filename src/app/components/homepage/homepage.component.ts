@@ -60,6 +60,7 @@ export class HomepageComponent implements OnInit {
   ngOnInit(): void {
     this.fantasyLeagueService.getWeekDetails().subscribe(weekDetails => {
       this.weekDetailsSubject.next(weekDetails);
+      this.fantasyLeagueService.getMvpBoard();
     });
 
     this.fantasyLeagueService.authenticated$.subscribe(a => {

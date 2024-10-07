@@ -6,5 +6,6 @@ export interface PlayerDetail {
   teamName: string,
   role: string,
   rating: string,
+  cricheroesName?: string,
   selected: boolean,
 }

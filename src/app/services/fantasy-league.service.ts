@@ -6,6 +6,7 @@ import { PlayerDetail } from '../models/player-details.model';
 import { FantasyTeamRequest } from '../models/fantasy-team-request.model';
 import { User } from '../models/user.model';
 import { LeaderboardFantasyTeam, LeaderboardResponse } from '../models/leaderboard-response.mode';
+import { TeamPipe } from '../pipes/team.pipe';
 
 
 @Injectable({
@@ -40,8 +41,8 @@ export class FantasyLeagueService {
   signupUrl = "api/users/register";
   createTeamUrl = "api/fantasy/create-team";
   base_url: string =
-    "https://infinity-fantasy-league.et.r.appspot.com/";
-  // "http://localhost:8080/";
+    // "https://infinity-fantasy-league.et.r.appspot.com/";
+    "http://localhost:8080/";
 
   authenticatedSubject = new BehaviorSubject<boolean>(false);
   authenticated$ = this.authenticatedSubject.asObservable();
@@ -94,6 +95,7 @@ export class FantasyLeagueService {
     var endpoint = "api/players/all";
     return this.http.get<PlayerDetail[]>(this.base_url + endpoint)
       .subscribe((response: PlayerDetail[]) => {
+        // console.log(response);
         this.playerDetails = response.sort(
           (a, b) => (a.name).localeCompare(b.name)
         ).map(resp => {
@@ -104,9 +106,11 @@ export class FantasyLeagueService {
             teamName: resp.teamName,
             role: resp.role,
             rating: resp.rating,
-            selected: resp.selected
+            selected: resp.selected,
+            cricheroesName: resp.cricheroesName
           }
         });
+        console.log(this.playerDetails)
       })
   }
 
@@ -200,4 +204,74 @@ export class FantasyLeagueService {
   //   this.user = JSON.parse(user);
   //   console.log(this.user);
   // }
+
+
+  getMvpBoard() {
+    this.setMatchDayPoints();
+  }
+
+  setMatchDayPoints() {
+    this.http.get<any>('assets/oct5.json').subscribe(a => {
+      console.log(a);
+      a.forEach((el: any) => {
+        const body = {
+          weekId: "3",
+          playerId: el?.player_id,
+          battingPoints: el?.battingPoints,
+          bowlingPoints: el?.bowlingPoints,
+          fieldingPoints: el?.fieldingPoints,
+          playerPoints: el?.playerPoints,
+        }
+        // console.log(body);
+        // this.http.post(this.base_url + "api/players/update_player", body).subscribe(x => console.log(x));
+      });
+    });
+  }
+
+  getTeamIds(num: Number) {
+    switch (num) {
+      case 5819087:
+        return "NB";
+      case 7349628:
+        return "LE";
+      case 5804668:
+        return "IJ";
+      case 7349687:
+        return "DW";
+      case 5820628:
+        return "HU";
+      case 7349618:
+        return "PR";
+
+      default:
+        return "num";
+    }
+  }
+
+  getTeamName(teamId: string) {
+    switch (teamId) {
+      case "NB":
+        return "NewBies";
+      case "LE":
+        return "Legends";
+      case "IJ":
+        return "Juggernauts";
+      case "DW":
+        return "Warriors";
+      case "HU":
+        return "Hustlers";
+      case "PR":
+        return "Predators";
+
+      default:
+        return teamId;
+    }
+  }
+
+  getName(player: PlayerDetail, a: any) {
+    console.log(player.name);
+    const x = a.findIndex((a1: any) => player.name === a1?.name);
+    return a[x]?.cricheroesName;
+  }
+
 }

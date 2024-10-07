@@ -62,7 +62,7 @@ export class MatchDayComponent implements OnInit {
 
   previewYourTeam() {
     const dialogRef = this.dialog.open(PreviewTeamDialogComponent, {
-      width: '250px',
+      width: '350px',
       data: this.previewTeam // Optional data passing
     });
   }
