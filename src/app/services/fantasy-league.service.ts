@@ -41,8 +41,8 @@ export class FantasyLeagueService {
   signupUrl = "api/users/register";
   createTeamUrl = "api/fantasy/create-team";
   base_url: string =
-    // "https://infinity-fantasy-league.et.r.appspot.com/";
-    "http://localhost:8080/";
+    "https://infinity-fantasy-league.et.r.appspot.com/";
+  // "http://localhost:8080/";
 
   authenticatedSubject = new BehaviorSubject<boolean>(false);
   authenticated$ = this.authenticatedSubject.asObservable();
@@ -110,7 +110,7 @@ export class FantasyLeagueService {
             cricheroesName: resp.cricheroesName
           }
         });
-        console.log(this.playerDetails)
+        // console.log(this.playerDetails)
       })
   }
 
@@ -207,12 +207,12 @@ export class FantasyLeagueService {
 
 
   getMvpBoard() {
-    this.setMatchDayPoints();
+    // this.setMatchDayPoints();
   }
 
   setMatchDayPoints() {
     this.http.get<any>('assets/oct5.json').subscribe(a => {
-      console.log(a);
+      // console.log(a);
       a.forEach((el: any) => {
         const body = {
           weekId: "3",
