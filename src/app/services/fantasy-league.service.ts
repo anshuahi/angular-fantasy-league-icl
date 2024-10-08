@@ -168,6 +168,9 @@ export class FantasyLeagueService {
         }
         else {
           this.registerMessageSubject.next(response.message);
+          setTimeout(() => {
+            this.registerMessageSubject.next("");
+          }, 5000);
         }
       }
     )
