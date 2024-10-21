@@ -50,6 +50,11 @@ export class CreateNewTeamComponent implements OnInit {
     this.route.paramMap.subscribe(params => {
       this.playerDetails = this.fantasyLeagueService.getPlayers();
       this.weekId = params.get('id')!;
+      // this.teams =
+      const teams = this.fantasyLeagueService.getTeamsByMatch(this.weekId)
+      if (teams.length) {
+        this.teams = teams;
+      }
       this.teamId = this.fantasyLeagueService.getTeamId(this.weekId);
       this.fantasyLeagueService.getTeamByWeekId(this.weekId).subscribe(
         (team: LeaderboardFantasyTeam) => {
@@ -80,7 +85,7 @@ export class CreateNewTeamComponent implements OnInit {
   checkCondition(player: PlayerDetail): Observable<boolean> {
     if (this.selectedPlayers.includes(player.playerId.toString())) return of(false);
     if (this.selectedPlayers.length >= this.teamSize
-      || this.creditsLeft < 6
+      || this.creditsLeft < 5
       || Number(player.rating) > this.creditsLeft) {
       return of(true);
     }

@@ -13,6 +13,16 @@ import { TeamPipe } from '../pipes/team.pipe';
   providedIn: 'root'
 })
 export class FantasyLeagueService {
+  weekDetails!: WeekDetails[];
+
+  getTeamsByMatch(weekId: string): string[] {
+    const matches = this.weekDetails.filter(week => week.weekId.toString() == weekId);
+    console.log(matches);
+    if (matches.length) {
+      return [matches[0].team1, matches[0].team2, matches[0].team3, matches[0].team4, matches[0].team5, matches[0].team6]
+    }
+    return [];
+  }
 
   getTeamByTeamId(teamId: string) {
     const endPoint = "api/fantasy/";
@@ -41,25 +51,14 @@ export class FantasyLeagueService {
   signupUrl = "api/users/register";
   createTeamUrl = "api/fantasy/create-team";
   base_url: string =
-    "https://infinity-fantasy-league.et.r.appspot.com/";
-  // "http://localhost:8080/";
+    // "https://infinity-fantasy-league.et.r.appspot.com/";
+    "http://localhost:8080/";
 
   authenticatedSubject = new BehaviorSubject<boolean>(false);
   authenticated$ = this.authenticatedSubject.asObservable();
   user!: User;
   playerDetails: PlayerDetail[] = [];
 
-  week0: WeekDetails = {
-    weekId: "0",
-    weekName: "Week-0",
-    cutOffTime: "1726884000",
-    team1: "NB",
-    team2: "HU",
-    team3: "LE",
-    team4: "IJ",
-    team5: "DW",
-    team6: "PR"
-  } as unknown as WeekDetails
 
   setPlayerDetails(playerDetails: PlayerDetail[]) {
     this.playerDetails = playerDetails;
@@ -125,6 +124,7 @@ export class FantasyLeagueService {
         if (response.status === 200) {
           const matches = response?.matchesPerWeek || [];
           const m = matches.sort((a, b) => Number(a.weekId) - Number(b.weekId))
+          this.weekDetails = m;
           return m;
         }
         else {
@@ -214,18 +214,19 @@ export class FantasyLeagueService {
   }
 
   setMatchDayPoints() {
-    this.http.get<any>('assets/oct5.json').subscribe(a => {
+    this.http.get<any>('assets/oct19.json').subscribe(a => {
       // console.log(a);
       a.forEach((el: any) => {
         const body = {
-          weekId: "3",
+          weekId: "5",
+          name: el?.name,
           playerId: el?.player_id,
           battingPoints: el?.battingPoints,
           bowlingPoints: el?.bowlingPoints,
           fieldingPoints: el?.fieldingPoints,
           playerPoints: el?.playerPoints,
         }
-        // console.log(body);
+        console.log(body);
         // this.http.post(this.base_url + "api/players/update_player", body).subscribe(x => console.log(x));
       });
     });
