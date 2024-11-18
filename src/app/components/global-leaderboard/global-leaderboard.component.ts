@@ -48,11 +48,4 @@ export class GlobalLeaderboardComponent implements OnInit {
     )
   }
 
-  previewTeams(user: GlobalLeaderboardUser) {
-    const dialogRef = this.dialog.open(PreviewAllTeamsComponent, {
-      width: '350px',
-      data: user // Optional data passing
-    });
-  }
-
 }

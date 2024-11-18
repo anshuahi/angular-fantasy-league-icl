@@ -51,8 +51,8 @@ export class FantasyLeagueService {
   signupUrl = "api/users/register";
   createTeamUrl = "api/fantasy/create-team";
   base_url: string =
-    // "https://infinity-fantasy-league.et.r.appspot.com/";
-    "http://localhost:8080/";
+    "https://infinity-fantasy-league.et.r.appspot.com/";
+  // "http://localhost:8080/";
 
   authenticatedSubject = new BehaviorSubject<boolean>(false);
   authenticated$ = this.authenticatedSubject.asObservable();
