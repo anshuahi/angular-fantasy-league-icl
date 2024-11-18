@@ -5,7 +5,7 @@ import { MatchDetailsResponse, WeekDetails } from '../components/homepage/homepa
 import { PlayerDetail } from '../models/player-details.model';
 import { FantasyTeamRequest } from '../models/fantasy-team-request.model';
 import { User } from '../models/user.model';
-import { LeaderboardFantasyTeam, LeaderboardResponse } from '../models/leaderboard-response.mode';
+import { GlobalLeaderboardResponse, LeaderboardFantasyTeam, LeaderboardResponse } from '../models/leaderboard-response.mode';
 import { TeamPipe } from '../pipes/team.pipe';
 
 
@@ -51,8 +51,8 @@ export class FantasyLeagueService {
   signupUrl = "api/users/register";
   createTeamUrl = "api/fantasy/create-team";
   base_url: string =
-    "https://infinity-fantasy-league.et.r.appspot.com/";
-  // "http://localhost:8080/";
+    // "https://infinity-fantasy-league.et.r.appspot.com/";
+    "http://localhost:8080/";
 
   authenticatedSubject = new BehaviorSubject<boolean>(false);
   authenticated$ = this.authenticatedSubject.asObservable();
@@ -139,6 +139,11 @@ export class FantasyLeagueService {
     return this.http.get<LeaderboardResponse>(this.base_url + endpoint)
   }
 
+  getGlobalLeaderboard() {
+    var endPoint = "api/leaderboard/global";
+    return this.http.get<GlobalLeaderboardResponse>(this.base_url + endPoint)//.subscribe(a => console.log(a));
+  }
+
   saveTeam(selectedPlayers: PlayerDetail[], captain: string, viceCaptain: string, weekId: string, teamId: string) {
     const players = selectedPlayers.map(player => player.playerId);
     players.push(captain);
@@ -214,11 +219,12 @@ export class FantasyLeagueService {
   }
 
   setMatchDayPoints() {
-    this.http.get<any>('assets/oct19.json').subscribe(a => {
-      // console.log(a);
+    this.http.get<any>('assets/nov16.json').subscribe(a => {
+      console.log(a);
+
       a.forEach((el: any) => {
         const body = {
-          weekId: "5",
+          weekId: "8",
           name: el?.name,
           playerId: el?.player_id,
           battingPoints: el?.battingPoints,
@@ -226,7 +232,7 @@ export class FantasyLeagueService {
           fieldingPoints: el?.fieldingPoints,
           playerPoints: el?.playerPoints,
         }
-        console.log(body);
+        // console.log(body);
         // this.http.post(this.base_url + "api/players/update_player", body).subscribe(x => console.log(x));
       });
     });

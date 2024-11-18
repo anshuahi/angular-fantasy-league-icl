@@ -29,6 +29,7 @@ export class HeaderComponent implements OnInit {
       }, 1000);
       // console.log(this.user);
     });
+    this.fantasyLeagueService.getGlobalLeaderboard();
   }
   login = 'login';
 
@@ -41,5 +42,9 @@ export class HeaderComponent implements OnInit {
     localStorage.removeItem("user");
     this.fantasyLeagueService.authenticatedSubject.next(false)
     this.router.navigate(['/login']);
+  }
+
+  globalLeaderboard() {
+    this.router.navigate(['/global-leaderboard']);
   }
 }

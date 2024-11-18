@@ -1,0 +1,56 @@
+.global {
+    margin: 20px auto;
+    width: 400px;
+    border: 1px solid red;
+    padding: 20px;
+}
+
+.example-header-image {
+    background-image: url('https://source.unsplash.com/50x50/?nature');
+    background-size: cover;
+}
+
+mat-card {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.user {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+h2 {
+    text-align: center;
+}
+
+mat-expansion-panel {
+    margin: 10px 0px;
+}
+
+mat-panel-description {
+    flex-grow: 0 !important;
+}
+
+.weekid {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+mat-card {
+    margin: 5px 13px;
+}
+
+.previewPoints {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+// .previewPoints>.item:nth-child(3n+1) {
+//     margin-left: 0;
+//     /* Ensure no margin at the start of a new row */
+// }

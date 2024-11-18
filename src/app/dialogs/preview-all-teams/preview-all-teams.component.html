@@ -1,0 +1,11 @@
+<div>
+    <h2>{{ data.leaderboardUser.fullName }} </h2>
+    <div>
+        <mat-card *ngFor="let team of data.fantasyTeamList">
+            <div class="user" (click)="previewTeam(team)">
+                <h5>{{ team.weekId }}</h5>
+                <p>{{ (team.totalPoints)}}</p>
+            </div>
+        </mat-card>
+    </div>
+</div>

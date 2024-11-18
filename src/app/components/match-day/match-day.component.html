@@ -13,8 +13,7 @@
     <div class="actions">
         <button type="button" class="btn create" (click)="goToCreateTeam()" *ngIf="showCreateEdit">
             Create/Edit</button>
-        <button type="button" class="btn create" (click)="openLeaderBoard()"
-            *ngIf="showLeaderBoard">LeaderBoard</button>
+        <button type="button" class="btn create" (click)="openLeaderBoard()">LeaderBoard</button>
         <button type="button" class="btn btn-info" (click)="previewYourTeam()" *ngIf="previewTeam">Team
             Preview</button>
         <button type="button" class="btn btn-light" (click)="previewYourTeam()" disabled="true" *ngIf="showComingUp">

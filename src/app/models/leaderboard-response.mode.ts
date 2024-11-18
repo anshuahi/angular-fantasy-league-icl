@@ -37,3 +37,15 @@ export enum MatchStatus {
     IN_PROGRESS = 'IN_PROGRESS',
     CANCELLED = 'CANCELLED',
 }
+
+export interface GlobalLeaderboardUser {
+    totalPoints: Number,
+    leaderboardUser: LeaderboardUser,
+    fantasyTeamList: LeaderboardFantasyTeam[]
+}
+
+export interface GlobalLeaderboardResponse {
+    status: Number,
+    message: String,
+    globalLeaderboardUsers: GlobalLeaderboardUser[]
+}

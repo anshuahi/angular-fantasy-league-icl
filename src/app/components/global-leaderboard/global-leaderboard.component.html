@@ -1,0 +1,21 @@
+<div class="global">
+    <h2>Global Leaderboard</h2>
+    <hr>
+    <div>
+        <mat-accordion>
+            <mat-expansion-panel *ngFor="let user of globalLeaderboardResponse; let i = index">
+                <mat-expansion-panel-header>
+                    <mat-panel-title> {{i+1}}. {{ user?.leaderboardUser?.fullName }}
+                        <mat-icon *ngIf="i == 0">emoji_events</mat-icon> </mat-panel-title>
+                    <mat-panel-description> {{ (user?.totalPoints?.toFixed(3)) }} </mat-panel-description>
+                </mat-expansion-panel-header>
+                <div class="previewPoints">
+                    <mat-card *ngFor="let team of user.fantasyTeamList" class="item" (click)="previewTeam(team)">
+                        <div class="weekid">Week-{{team.weekId}} </div>
+                        <div>{{team.totalPoints.toFixed(3)}} </div>
+                    </mat-card>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+</div>

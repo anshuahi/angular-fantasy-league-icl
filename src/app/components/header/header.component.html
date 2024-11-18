@@ -9,6 +9,9 @@
     <nav>
         <ul>
             <li *ngIf="authenticated$ | async">
+                <a (click)="globalLeaderboard()">Global LeaderBoard</a>
+            </li>
+            <li *ngIf="authenticated$ | async">
                 <a>{{ user?.username }}</a>
             </li>
             <li *ngIf="authenticated$ | async">

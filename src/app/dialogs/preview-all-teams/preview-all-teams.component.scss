@@ -1,0 +1,15 @@
+mat-card {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.user {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+h2 {
+    text-align: center;
+}
