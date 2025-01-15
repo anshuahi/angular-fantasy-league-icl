@@ -54,7 +54,9 @@ export class CreateNewTeamComponent implements OnInit {
       const teams = this.fantasyLeagueService.getTeamsByMatch(this.weekId)
       if (teams.length) {
         this.teams = teams;
+        console.log(this.teams)
       }
+      this.teams = this.teams.filter(team => team != '');
       this.teamId = this.fantasyLeagueService.getTeamId(this.weekId);
       this.fantasyLeagueService.getTeamByWeekId(this.weekId).subscribe(
         (team: LeaderboardFantasyTeam) => {

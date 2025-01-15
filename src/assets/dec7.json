@@ -1,0 +1,474 @@
+[
+    {
+        "name": "Prashant",
+        "battingPoints": "3.904",
+        "bowlingPoints": "6.274",
+        "fieldingPoints": "0.360",
+        "player_id": 2793287,
+        "playerPoints": "10.538"
+    },
+    {
+        "name": "Nilesh",
+        "battingPoints": "3.428",
+        "bowlingPoints": "1.730",
+        "fieldingPoints": "0.900",
+        "player_id": 10982241,
+        "playerPoints": "6.058"
+    },
+    {
+        "name": "Mohit Mathur",
+        "battingPoints": "2.011",
+        "bowlingPoints": "3.539",
+        "fieldingPoints": "0.000",
+        "player_id": 4313615,
+        "playerPoints": "5.550"
+    },
+    {
+        "name": "Ashish Verma",
+        "battingPoints": "1.300",
+        "bowlingPoints": "3.705",
+        "fieldingPoints": "0.000",
+        "player_id": 16008428,
+        "playerPoints": "5.005"
+    },
+    {
+        "name": "Aditya Nigam",
+        "battingPoints": "2.427",
+        "bowlingPoints": "1.918",
+        "fieldingPoints": "0.000",
+        "player_id": 10160661,
+        "playerPoints": "4.345"
+    },
+    {
+        "name": "Akshay Tomar",
+        "battingPoints": "0.614",
+        "bowlingPoints": "3.702",
+        "fieldingPoints": "0.000",
+        "player_id": 1492711,
+        "playerPoints": "4.316"
+    },
+    {
+        "name": "Chandrakant Pandey",
+        "battingPoints": "4.012",
+        "bowlingPoints": "0.000",
+        "fieldingPoints": "0.000",
+        "player_id": 8365814,
+        "playerPoints": "4.012"
+    },
+    {
+        "name": "Ashutosh Mishra",
+        "battingPoints": "1.716",
+        "bowlingPoints": "0.000",
+        "fieldingPoints": "2.010",
+        "player_id": 8331830,
+        "playerPoints": "3.726"
+    },
+    {
+        "name": "Nikhil Kanwar",
+        "battingPoints": "1.300",
+        "bowlingPoints": "1.907",
+        "fieldingPoints": "0.360",
+        "player_id": 19011092,
+        "playerPoints": "3.567"
+    },
+    {
+        "name": "Pankaj Saxena",
+        "battingPoints": "0.000",
+        "bowlingPoints": "3.535",
+        "fieldingPoints": "0.000",
+        "player_id": 8332201,
+        "playerPoints": "3.535"
+    },
+    {
+        "name": "Nikhil Chandak",
+        "battingPoints": "2.405",
+        "bowlingPoints": "-0.040",
+        "fieldingPoints": "0.000",
+        "player_id": 17592561,
+        "playerPoints": "2.365"
+    },
+    {
+        "name": "Sarvesh Khatri",
+        "battingPoints": "0.200",
+        "bowlingPoints": "1.743",
+        "fieldingPoints": "0.000",
+        "player_id": 10967515,
+        "playerPoints": "1.943"
+    },
+    {
+        "name": "Atul Sharma",
+        "battingPoints": "0.000",
+        "bowlingPoints": "1.725",
+        "fieldingPoints": "0.000",
+        "player_id": 8332457,
+        "playerPoints": "1.725"
+    },
+    {
+        "name": "Rahul Masatker",
+        "battingPoints": "0.200",
+        "bowlingPoints": "0.000",
+        "fieldingPoints": "1.440",
+        "player_id": 7702008,
+        "playerPoints": "1.640"
+    },
+    {
+        "name": "Mahesh Shewale",
+        "battingPoints": "1.000",
+        "bowlingPoints": "0.000",
+        "fieldingPoints": "0.360",
+        "player_id": 15883796,
+        "playerPoints": "1.360"
+    },
+    {
+        "name": "Tushar",
+        "battingPoints": "0.300",
+        "bowlingPoints": "0.140",
+        "fieldingPoints": "0.900",
+        "player_id": 10962991,
+        "playerPoints": "1.340"
+    },
+    {
+        "name": "Zaki Mubarki",
+        "battingPoints": "0.700",
+        "bowlingPoints": "0.000",
+        "fieldingPoints": "0.360",
+        "player_id": 7204722,
+        "playerPoints": "1.060"
+    },
+    {
+        "name": "Gopal Agrawal",
+        "battingPoints": "0.000",
+        "bowlingPoints": "0.000",
+        "fieldingPoints": "0.360",
+        "player_id": 5011714,
+        "playerPoints": "0.360"
+    },
+    {
+        "name": "Jiten Israni",
+        "battingPoints": "0.300",
+        "bowlingPoints": "0.000",
+        "fieldingPoints": "0.000",
+        "player_id": 8331522,
+        "playerPoints": "0.300"
+    },
+    {
+        "name": "Mayur Jagtap",
+        "battingPoints": "3.772",
+        "bowlingPoints": "2.979",
+        "fieldingPoints": "0.288",
+        "player_id": 8332219,
+        "playerPoints": "7.039"
+    },
+    {
+        "name": "Saurabh Manjramkar",
+        "battingPoints": "6.654",
+        "bowlingPoints": "0.000",
+        "fieldingPoints": "0.000",
+        "player_id": 133334,
+        "playerPoints": "6.654"
+    },
+    {
+        "name": "Ankush",
+        "battingPoints": "1.100",
+        "bowlingPoints": "2.602",
+        "fieldingPoints": "0.245",
+        "player_id": 5020916,
+        "playerPoints": "3.947"
+    },
+    {
+        "name": "Rajiv Coomar Git 6b",
+        "battingPoints": "1.400",
+        "bowlingPoints": "1.894",
+        "fieldingPoints": "0.576",
+        "player_id": 14957578,
+        "playerPoints": "3.870"
+    },
+    {
+        "name": "Shane",
+        "battingPoints": "0.500",
+        "bowlingPoints": "3.351",
+        "fieldingPoints": "0.000",
+        "player_id": 19083419,
+        "playerPoints": "3.851"
+    },
+    {
+        "name": "Vinayak Kadam",
+        "battingPoints": "0.000",
+        "bowlingPoints": "3.714",
+        "fieldingPoints": "0.000",
+        "player_id": 15824485,
+        "playerPoints": "3.714"
+    },
+    {
+        "name": "Gaurav Nathani",
+        "battingPoints": "0.100",
+        "bowlingPoints": "3.324",
+        "fieldingPoints": "0.000",
+        "player_id": 8324976,
+        "playerPoints": "3.424"
+    },
+    {
+        "name": "Asrar Pathan",
+        "battingPoints": "1.000",
+        "bowlingPoints": "1.630",
+        "fieldingPoints": "0.000",
+        "player_id": 8426689,
+        "playerPoints": "2.630"
+    },
+    {
+        "name": "Rupesh Routh",
+        "battingPoints": "1.200",
+        "bowlingPoints": "0.000",
+        "fieldingPoints": "1.296",
+        "player_id": 10967779,
+        "playerPoints": "2.496"
+    },
+    {
+        "name": "Vivek Singh",
+        "battingPoints": "0.200",
+        "bowlingPoints": "1.731",
+        "fieldingPoints": "0.360",
+        "player_id": 25201574,
+        "playerPoints": "2.291"
+    },
+    {
+        "name": "Ashish Patidar",
+        "battingPoints": "2.200",
+        "bowlingPoints": "-0.046",
+        "fieldingPoints": "0.000",
+        "player_id": 15824785,
+        "playerPoints": "2.154"
+    },
+    {
+        "name": "Abhijeet Takmare",
+        "battingPoints": "0.900",
+        "bowlingPoints": "0.000",
+        "fieldingPoints": "0.648",
+        "player_id": 22657704,
+        "playerPoints": "1.548"
+    },
+    {
+        "name": "Santosh Lad",
+        "battingPoints": "0.000",
+        "bowlingPoints": "1.727",
+        "fieldingPoints": "-0.255",
+        "player_id": 15818399,
+        "playerPoints": "1.472"
+    },
+    {
+        "name": "Prateek Nepaliya",
+        "battingPoints": "0.700",
+        "bowlingPoints": "0.000",
+        "fieldingPoints": "0.360",
+        "player_id": 27836553,
+        "playerPoints": "1.060"
+    },
+    {
+        "name": "Aman Bangalore",
+        "battingPoints": "0.840",
+        "bowlingPoints": "0.085",
+        "fieldingPoints": "0.000",
+        "player_id": 2147490,
+        "playerPoints": "0.925"
+    },
+    {
+        "name": "A Z",
+        "battingPoints": "0.600",
+        "bowlingPoints": "0.000",
+        "fieldingPoints": "0.000",
+        "player_id": 8331755,
+        "playerPoints": "0.600"
+    },
+    {
+        "name": "Anshul B",
+        "battingPoints": "0.528",
+        "bowlingPoints": "-0.050",
+        "fieldingPoints": "0.000",
+        "player_id": 8331693,
+        "playerPoints": "0.478"
+    },
+    {
+        "name": "Sanjay Yadav",
+        "battingPoints": "0.300",
+        "bowlingPoints": "0.000",
+        "fieldingPoints": "0.000",
+        "player_id": 789869,
+        "playerPoints": "0.300"
+    },
+    {
+        "name": "Niraj Kumar Lathar",
+        "battingPoints": "0.700",
+        "bowlingPoints": "0.000",
+        "fieldingPoints": "-2.100",
+        "player_id": 25188375,
+        "playerPoints": "-1.400"
+    },
+    {
+        "name": "Anshu Ahirwar",
+        "battingPoints": "4.400",
+        "bowlingPoints": "6.007",
+        "fieldingPoints": "0.720",
+        "player_id": 1899702,
+        "playerPoints": "11.127"
+    },
+    {
+        "name": "Bharat Singh Kushwah",
+        "battingPoints": "1.222",
+        "bowlingPoints": "8.741",
+        "fieldingPoints": "0.000",
+        "player_id": 2080801,
+        "playerPoints": "9.963"
+    },
+    {
+        "name": "Asaad Khan",
+        "battingPoints": "5.431",
+        "bowlingPoints": "-0.060",
+        "fieldingPoints": "0.000",
+        "player_id": 25195968,
+        "playerPoints": "5.371"
+    },
+    {
+        "name": "Ritesh Notani",
+        "battingPoints": "0.100",
+        "bowlingPoints": "3.705",
+        "fieldingPoints": "0.360",
+        "player_id": 20890143,
+        "playerPoints": "4.165"
+    },
+    {
+        "name": "Nitin Sharma",
+        "battingPoints": "0.000",
+        "bowlingPoints": "3.721",
+        "fieldingPoints": "0.360",
+        "player_id": 22135560,
+        "playerPoints": "4.081"
+    },
+    {
+        "name": "Pavan",
+        "battingPoints": "2.500",
+        "bowlingPoints": "0.000",
+        "fieldingPoints": "0.720",
+        "player_id": 1191121,
+        "playerPoints": "3.220"
+    },
+    {
+        "name": "Vitrag Sheladia",
+        "battingPoints": "0.000",
+        "bowlingPoints": "1.740",
+        "fieldingPoints": "0.720",
+        "player_id": 9973811,
+        "playerPoints": "2.460"
+    },
+    {
+        "name": "Kiran Thite",
+        "battingPoints": "0.900",
+        "bowlingPoints": "1.884",
+        "fieldingPoints": "-0.425",
+        "player_id": 15818409,
+        "playerPoints": "2.359"
+    },
+    {
+        "name": "Yasir Siddiqui",
+        "battingPoints": "0.000",
+        "bowlingPoints": "1.735",
+        "fieldingPoints": "0.360",
+        "player_id": 17247355,
+        "playerPoints": "2.095"
+    },
+    {
+        "name": "Ganesh Gujar",
+        "battingPoints": "1.800",
+        "bowlingPoints": "0.000",
+        "fieldingPoints": "0.000",
+        "player_id": 8331756,
+        "playerPoints": "1.800"
+    },
+    {
+        "name": "Rohit Rathi",
+        "battingPoints": "2.101",
+        "bowlingPoints": "-0.069",
+        "fieldingPoints": "-0.330",
+        "player_id": 8325002,
+        "playerPoints": "1.702"
+    },
+    {
+        "name": "Vivek Kumar",
+        "battingPoints": "0.700",
+        "bowlingPoints": "0.101",
+        "fieldingPoints": "0.360",
+        "player_id": 8332212,
+        "playerPoints": "1.161"
+    },
+    {
+        "name": "Amit Jha",
+        "battingPoints": "1.400",
+        "bowlingPoints": "0.000",
+        "fieldingPoints": "-0.390",
+        "player_id": 2383376,
+        "playerPoints": "1.010"
+    },
+    {
+        "name": "Swapnil Chaudhari",
+        "battingPoints": "0.900",
+        "bowlingPoints": "0.000",
+        "fieldingPoints": "0.000",
+        "player_id": 10967437,
+        "playerPoints": "0.900"
+    },
+    {
+        "name": "Manish Kumar Singh",
+        "battingPoints": "0.827",
+        "bowlingPoints": "0.000",
+        "fieldingPoints": "0.000",
+        "player_id": 15984038,
+        "playerPoints": "0.827"
+    },
+    {
+        "name": "Siva Krishna",
+        "battingPoints": "0.305",
+        "bowlingPoints": "0.000",
+        "fieldingPoints": "0.360",
+        "player_id": 17628938,
+        "playerPoints": "0.665"
+    },
+    {
+        "name": "Pranav Tripathi",
+        "battingPoints": "0.400",
+        "bowlingPoints": "-0.050",
+        "fieldingPoints": "0.195",
+        "player_id": 27905639,
+        "playerPoints": "0.545"
+    },
+    {
+        "name": "Sujay Patel",
+        "battingPoints": "0.300",
+        "bowlingPoints": "0.000",
+        "fieldingPoints": "0.000",
+        "player_id": 6004494,
+        "playerPoints": "0.300"
+    },
+    {
+        "name": "Sandeep Singh",
+        "battingPoints": "0.200",
+        "bowlingPoints": "0.000",
+        "fieldingPoints": "-0.040",
+        "player_id": 2082680,
+        "playerPoints": "0.160"
+    },
+    {
+        "name": "Lalit Chandwani",
+        "battingPoints": "0.100",
+        "bowlingPoints": "0.000",
+        "fieldingPoints": "0.000",
+        "player_id": 8332519,
+        "playerPoints": "0.100"
+    },
+    {
+        "name": "Rahul Humnabadkar",
+        "battingPoints": "0.800",
+        "bowlingPoints": "-0.065",
+        "fieldingPoints": "-0.640",
+        "player_id": 25196724,
+        "playerPoints": "0.095"
+    }
+]

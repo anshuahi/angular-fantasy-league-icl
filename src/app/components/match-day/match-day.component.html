@@ -1,13 +1,16 @@
 <mat-card class="week">
-    <mat-card-title>Week {{ weekDay.weekId }} </mat-card-title>
-    <div class="matchinfo">
-        <app-match-info [team1]="weekDay.team1" [team2]="weekDay.team2"></app-match-info>
-    </div>
-    <div class="matchinfo">
-        <app-match-info [team1]="weekDay.team3" [team2]="weekDay.team4"></app-match-info>
-    </div>
-    <div class="matchinfo">
-        <app-match-info [team1]="weekDay.team5" [team2]="weekDay.team6"></app-match-info>
+    <mat-card-title>{{ weekDay.weekName }} </mat-card-title>
+    <div class="matches">
+
+        <div class="matchinfo">
+            <app-match-info [team1]="weekDay.team1" [team2]="weekDay.team2"></app-match-info>
+        </div>
+        <div class="matchinfo">
+            <app-match-info [team1]="weekDay.team3" [team2]="weekDay.team4"></app-match-info>
+        </div>
+        <div class="matchinfo" *ngIf="weekDay.team5 != ''">
+            <app-match-info [team1]="weekDay.team5" [team2]="weekDay.team6"></app-match-info>
+        </div>
     </div>
 
     <div class="actions">

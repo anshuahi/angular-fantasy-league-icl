@@ -51,8 +51,8 @@ export class FantasyLeagueService {
   signupUrl = "api/users/register";
   createTeamUrl = "api/fantasy/create-team";
   base_url: string =
-    "https://infinity-fantasy-league.et.r.appspot.com/";
-  // "http://localhost:8080/";
+    // "https://infinity-fantasy-league.et.r.appspot.com/";
+    "http://localhost:8080/";
 
   authenticatedSubject = new BehaviorSubject<boolean>(false);
   authenticated$ = this.authenticatedSubject.asObservable();
@@ -219,12 +219,12 @@ export class FantasyLeagueService {
   }
 
   setMatchDayPoints() {
-    this.http.get<any>('assets/nov16.json').subscribe(a => {
+    this.http.get<any>('assets/dec7.json').subscribe(a => {
       console.log(a);
 
       a.forEach((el: any) => {
         const body = {
-          weekId: "8",
+          weekId: "11",
           name: el?.name,
           playerId: el?.player_id,
           battingPoints: el?.battingPoints,
@@ -232,8 +232,8 @@ export class FantasyLeagueService {
           fieldingPoints: el?.fieldingPoints,
           playerPoints: el?.playerPoints,
         }
-        // console.log(body);
-        // this.http.post(this.base_url + "api/players/update_player", body).subscribe(x => console.log(x));
+        console.log(body);
+        this.http.post(this.base_url + "api/players/update_player", body).subscribe(x => console.log(x));
       });
     });
   }
