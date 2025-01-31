@@ -30,6 +30,8 @@ export class GlobalLeaderboardComponent implements OnInit {
 
   constructor(private fantasyLeagueService: FantasyLeagueService, public dialog: MatDialog,) { }
 
+  ocs = ["Anshu Ahirwar", "tushar sachdeva", "Ankush Madan", "Apurva Singh"];
+
   ngOnInit(): void {
     this.fantasyLeagueService.getGlobalLeaderboard().subscribe(
       resp => {
@@ -41,6 +43,8 @@ export class GlobalLeaderboardComponent implements OnInit {
               fantasyTeamList: user.fantasyTeamList
             }
           }
+        ).filter(
+          leaderboard => !this.ocs.includes(leaderboard.leaderboardUser.fullName)
         );
 
         console.log(resp);
